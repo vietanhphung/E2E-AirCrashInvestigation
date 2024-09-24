@@ -1,0 +1,32 @@
+[0m14:53:21.593979 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x112936600>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x112a528d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x112a52690>]}
+
+
+============================== 14:53:21.596710 | 41d1d2e0-241e-4c04-91af-c71fbafb988a ==============================
+[0m14:53:21.596710 [info ] [MainThread]: Running with dbt=1.8.6
+[0m14:53:21.597071 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'debug': 'False', 'version_check': 'True', 'log_path': '/Users/connor/Desktop/files/project/flightCrashData/logs', 'fail_fast': 'False', 'profiles_dir': '/Users/connor/.dbt', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'None', 'log_format': 'default', 'static_parser': 'True', 'invocation_command': 'dbt init', 'introspect': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'send_anonymous_usage_stats': 'True'}
+[0m14:53:21.602034 [warn ] [MainThread]: [ConfigFolderDirectory]: Unable to parse dict {'dir': PosixPath('/Users/connor/.dbt')}
+[0m14:53:21.602388 [info ] [MainThread]: Creating dbt configuration folder at 
+[0m14:53:21.603659 [error] [MainThread]: Encountered an error:
+'profile'
+[0m14:53:21.604703 [error] [MainThread]: Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/dbt/cli/requires.py", line 138, in wrapper
+    result, success = func(*args, **kwargs)
+                      ^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/dbt/cli/requires.py", line 101, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/dbt/cli/main.py", line 470, in init
+    results = task.run()
+              ^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/dbt/task/init.py", line 320, in run
+    profile_name = self.get_profile_name_from_current_project()
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/dbt/task/init.py", line 141, in get_profile_name_from_current_project
+    return dbt_project["profile"]
+           ~~~~~~~~~~~^^^^^^^^^^^
+KeyError: 'profile'
+
+[0m14:53:21.633402 [debug] [MainThread]: Resource report: {"command_name": "init", "command_wall_clock_time": 0.09767083, "process_user_time": 0.714401, "process_kernel_time": 0.088606, "process_mem_max_rss": "97075200", "command_success": false, "process_in_blocks": "0", "process_out_blocks": "0"}
+[0m14:53:21.633899 [debug] [MainThread]: Command `dbt init` failed at 14:53:21.633832 after 0.10 seconds
+[0m14:53:21.634150 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x112467680>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x111defbc0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x112a0a1b0>]}
+[0m14:53:21.634373 [debug] [MainThread]: Flushing usage events
