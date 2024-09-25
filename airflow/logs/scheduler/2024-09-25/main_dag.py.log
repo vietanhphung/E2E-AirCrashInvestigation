@@ -1,0 +1,105 @@
+[2024-09-25T20:33:06.415+0000] {processor.py:161} INFO - Started process (PID=814) to work on /opt/airflow/dags/main_dag.py
+[2024-09-25T20:33:06.416+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/main_dag.py for tasks to queue
+[2024-09-25T20:33:06.417+0000] {logging_mixin.py:188} INFO - [2024-09-25T20:33:06.417+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/main_dag.py
+[2024-09-25T20:33:06.427+0000] {processor.py:840} INFO - DAG(s) 'AirCrashInvestigation_pipeline' retrieved from /opt/airflow/dags/main_dag.py
+[2024-09-25T20:33:06.518+0000] {logging_mixin.py:188} INFO - [2024-09-25T20:33:06.518+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-09-25T20:33:06.532+0000] {logging_mixin.py:188} INFO - [2024-09-25T20:33:06.531+0000] {dag.py:3954} INFO - Setting next_dagrun for AirCrashInvestigation_pipeline to 2024-09-25 00:00:00+00:00, run_after=2024-09-26 00:00:00+00:00
+[2024-09-25T20:33:06.544+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/main_dag.py took 0.133 seconds
+[2024-09-25T20:33:36.696+0000] {processor.py:161} INFO - Started process (PID=820) to work on /opt/airflow/dags/main_dag.py
+[2024-09-25T20:33:36.697+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/main_dag.py for tasks to queue
+[2024-09-25T20:33:36.700+0000] {logging_mixin.py:188} INFO - [2024-09-25T20:33:36.699+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/main_dag.py
+[2024-09-25T20:33:36.710+0000] {processor.py:840} INFO - DAG(s) 'AirCrashInvestigation_pipeline' retrieved from /opt/airflow/dags/main_dag.py
+[2024-09-25T20:33:36.733+0000] {logging_mixin.py:188} INFO - [2024-09-25T20:33:36.733+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-09-25T20:33:36.746+0000] {logging_mixin.py:188} INFO - [2024-09-25T20:33:36.746+0000] {dag.py:3954} INFO - Setting next_dagrun for AirCrashInvestigation_pipeline to 2024-09-25 00:00:00+00:00, run_after=2024-09-26 00:00:00+00:00
+[2024-09-25T20:33:36.756+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/main_dag.py took 0.067 seconds
+[2024-09-25T20:34:06.939+0000] {processor.py:161} INFO - Started process (PID=827) to work on /opt/airflow/dags/main_dag.py
+[2024-09-25T20:34:06.940+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/main_dag.py for tasks to queue
+[2024-09-25T20:34:06.942+0000] {logging_mixin.py:188} INFO - [2024-09-25T20:34:06.941+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/main_dag.py
+[2024-09-25T20:34:06.953+0000] {processor.py:840} INFO - DAG(s) 'AirCrashInvestigation_pipeline' retrieved from /opt/airflow/dags/main_dag.py
+[2024-09-25T20:34:06.976+0000] {logging_mixin.py:188} INFO - [2024-09-25T20:34:06.976+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-09-25T20:34:06.988+0000] {logging_mixin.py:188} INFO - [2024-09-25T20:34:06.988+0000] {dag.py:3954} INFO - Setting next_dagrun for AirCrashInvestigation_pipeline to 2024-09-25 00:00:00+00:00, run_after=2024-09-26 00:00:00+00:00
+[2024-09-25T20:34:06.997+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/main_dag.py took 0.064 seconds
+[2024-09-25T20:34:37.172+0000] {processor.py:161} INFO - Started process (PID=834) to work on /opt/airflow/dags/main_dag.py
+[2024-09-25T20:34:37.173+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/main_dag.py for tasks to queue
+[2024-09-25T20:34:37.175+0000] {logging_mixin.py:188} INFO - [2024-09-25T20:34:37.175+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/main_dag.py
+[2024-09-25T20:34:37.187+0000] {processor.py:840} INFO - DAG(s) 'AirCrashInvestigation_pipeline' retrieved from /opt/airflow/dags/main_dag.py
+[2024-09-25T20:34:37.209+0000] {logging_mixin.py:188} INFO - [2024-09-25T20:34:37.209+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-09-25T20:34:37.222+0000] {logging_mixin.py:188} INFO - [2024-09-25T20:34:37.222+0000] {dag.py:3954} INFO - Setting next_dagrun for AirCrashInvestigation_pipeline to 2024-09-25 00:00:00+00:00, run_after=2024-09-26 00:00:00+00:00
+[2024-09-25T20:34:37.231+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/main_dag.py took 0.066 seconds
+[2024-09-25T20:35:07.409+0000] {processor.py:161} INFO - Started process (PID=841) to work on /opt/airflow/dags/main_dag.py
+[2024-09-25T20:35:07.410+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/main_dag.py for tasks to queue
+[2024-09-25T20:35:07.411+0000] {logging_mixin.py:188} INFO - [2024-09-25T20:35:07.411+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/main_dag.py
+[2024-09-25T20:35:07.420+0000] {processor.py:840} INFO - DAG(s) 'AirCrashInvestigation_pipeline' retrieved from /opt/airflow/dags/main_dag.py
+[2024-09-25T20:35:07.438+0000] {logging_mixin.py:188} INFO - [2024-09-25T20:35:07.437+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-09-25T20:35:07.449+0000] {logging_mixin.py:188} INFO - [2024-09-25T20:35:07.449+0000] {dag.py:3954} INFO - Setting next_dagrun for AirCrashInvestigation_pipeline to 2024-09-25 00:00:00+00:00, run_after=2024-09-26 00:00:00+00:00
+[2024-09-25T20:35:07.460+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/main_dag.py took 0.056 seconds
+[2024-09-25T20:35:37.628+0000] {processor.py:161} INFO - Started process (PID=848) to work on /opt/airflow/dags/main_dag.py
+[2024-09-25T20:35:37.629+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/main_dag.py for tasks to queue
+[2024-09-25T20:35:37.630+0000] {logging_mixin.py:188} INFO - [2024-09-25T20:35:37.630+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/main_dag.py
+[2024-09-25T20:35:37.638+0000] {processor.py:840} INFO - DAG(s) 'AirCrashInvestigation_pipeline' retrieved from /opt/airflow/dags/main_dag.py
+[2024-09-25T20:35:37.653+0000] {logging_mixin.py:188} INFO - [2024-09-25T20:35:37.653+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-09-25T20:35:37.666+0000] {logging_mixin.py:188} INFO - [2024-09-25T20:35:37.666+0000] {dag.py:3954} INFO - Setting next_dagrun for AirCrashInvestigation_pipeline to 2024-09-25 00:00:00+00:00, run_after=2024-09-26 00:00:00+00:00
+[2024-09-25T20:35:37.678+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/main_dag.py took 0.055 seconds
+[2024-09-25T20:36:07.891+0000] {processor.py:161} INFO - Started process (PID=855) to work on /opt/airflow/dags/main_dag.py
+[2024-09-25T20:36:07.892+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/main_dag.py for tasks to queue
+[2024-09-25T20:36:07.894+0000] {logging_mixin.py:188} INFO - [2024-09-25T20:36:07.893+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/main_dag.py
+[2024-09-25T20:36:07.905+0000] {processor.py:840} INFO - DAG(s) 'AirCrashInvestigation_pipeline' retrieved from /opt/airflow/dags/main_dag.py
+[2024-09-25T20:36:07.925+0000] {logging_mixin.py:188} INFO - [2024-09-25T20:36:07.925+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-09-25T20:36:07.936+0000] {logging_mixin.py:188} INFO - [2024-09-25T20:36:07.936+0000] {dag.py:3954} INFO - Setting next_dagrun for AirCrashInvestigation_pipeline to 2024-09-25 00:00:00+00:00, run_after=2024-09-26 00:00:00+00:00
+[2024-09-25T20:36:07.946+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/main_dag.py took 0.061 seconds
+[2024-09-25T20:36:38.140+0000] {processor.py:161} INFO - Started process (PID=861) to work on /opt/airflow/dags/main_dag.py
+[2024-09-25T20:36:38.141+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/main_dag.py for tasks to queue
+[2024-09-25T20:36:38.143+0000] {logging_mixin.py:188} INFO - [2024-09-25T20:36:38.142+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/main_dag.py
+[2024-09-25T20:36:38.155+0000] {processor.py:840} INFO - DAG(s) 'AirCrashInvestigation_pipeline' retrieved from /opt/airflow/dags/main_dag.py
+[2024-09-25T20:36:38.175+0000] {logging_mixin.py:188} INFO - [2024-09-25T20:36:38.175+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-09-25T20:36:38.186+0000] {logging_mixin.py:188} INFO - [2024-09-25T20:36:38.186+0000] {dag.py:3954} INFO - Setting next_dagrun for AirCrashInvestigation_pipeline to 2024-09-25 00:00:00+00:00, run_after=2024-09-26 00:00:00+00:00
+[2024-09-25T20:36:38.195+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/main_dag.py took 0.062 seconds
+[2024-09-25T20:37:08.366+0000] {processor.py:161} INFO - Started process (PID=868) to work on /opt/airflow/dags/main_dag.py
+[2024-09-25T20:37:08.367+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/main_dag.py for tasks to queue
+[2024-09-25T20:37:08.369+0000] {logging_mixin.py:188} INFO - [2024-09-25T20:37:08.368+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/main_dag.py
+[2024-09-25T20:37:08.381+0000] {processor.py:840} INFO - DAG(s) 'AirCrashInvestigation_pipeline' retrieved from /opt/airflow/dags/main_dag.py
+[2024-09-25T20:37:08.404+0000] {logging_mixin.py:188} INFO - [2024-09-25T20:37:08.404+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-09-25T20:37:08.415+0000] {logging_mixin.py:188} INFO - [2024-09-25T20:37:08.415+0000] {dag.py:3954} INFO - Setting next_dagrun for AirCrashInvestigation_pipeline to 2024-09-25 00:00:00+00:00, run_after=2024-09-26 00:00:00+00:00
+[2024-09-25T20:37:08.424+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/main_dag.py took 0.066 seconds
+[2024-09-25T20:37:38.637+0000] {processor.py:161} INFO - Started process (PID=875) to work on /opt/airflow/dags/main_dag.py
+[2024-09-25T20:37:38.638+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/main_dag.py for tasks to queue
+[2024-09-25T20:37:38.639+0000] {logging_mixin.py:188} INFO - [2024-09-25T20:37:38.639+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/main_dag.py
+[2024-09-25T20:37:38.647+0000] {processor.py:840} INFO - DAG(s) 'AirCrashInvestigation_pipeline' retrieved from /opt/airflow/dags/main_dag.py
+[2024-09-25T20:37:38.666+0000] {logging_mixin.py:188} INFO - [2024-09-25T20:37:38.666+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-09-25T20:37:38.679+0000] {logging_mixin.py:188} INFO - [2024-09-25T20:37:38.679+0000] {dag.py:3954} INFO - Setting next_dagrun for AirCrashInvestigation_pipeline to 2024-09-25 00:00:00+00:00, run_after=2024-09-26 00:00:00+00:00
+[2024-09-25T20:37:38.689+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/main_dag.py took 0.058 seconds
+[2024-09-25T20:38:08.983+0000] {processor.py:161} INFO - Started process (PID=882) to work on /opt/airflow/dags/main_dag.py
+[2024-09-25T20:38:08.984+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/main_dag.py for tasks to queue
+[2024-09-25T20:38:08.986+0000] {logging_mixin.py:188} INFO - [2024-09-25T20:38:08.986+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/main_dag.py
+[2024-09-25T20:38:08.998+0000] {processor.py:840} INFO - DAG(s) 'AirCrashInvestigation_pipeline' retrieved from /opt/airflow/dags/main_dag.py
+[2024-09-25T20:38:09.018+0000] {logging_mixin.py:188} INFO - [2024-09-25T20:38:09.018+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-09-25T20:38:09.029+0000] {logging_mixin.py:188} INFO - [2024-09-25T20:38:09.029+0000] {dag.py:3954} INFO - Setting next_dagrun for AirCrashInvestigation_pipeline to 2024-09-25 00:00:00+00:00, run_after=2024-09-26 00:00:00+00:00
+[2024-09-25T20:38:09.039+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/main_dag.py took 0.062 seconds
+[2024-09-25T20:38:39.256+0000] {processor.py:161} INFO - Started process (PID=889) to work on /opt/airflow/dags/main_dag.py
+[2024-09-25T20:38:39.257+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/main_dag.py for tasks to queue
+[2024-09-25T20:38:39.258+0000] {logging_mixin.py:188} INFO - [2024-09-25T20:38:39.258+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/main_dag.py
+[2024-09-25T20:38:39.267+0000] {processor.py:840} INFO - DAG(s) 'AirCrashInvestigation_pipeline' retrieved from /opt/airflow/dags/main_dag.py
+[2024-09-25T20:38:39.282+0000] {logging_mixin.py:188} INFO - [2024-09-25T20:38:39.282+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-09-25T20:38:39.293+0000] {logging_mixin.py:188} INFO - [2024-09-25T20:38:39.293+0000] {dag.py:3954} INFO - Setting next_dagrun for AirCrashInvestigation_pipeline to 2024-09-25 00:00:00+00:00, run_after=2024-09-26 00:00:00+00:00
+[2024-09-25T20:38:39.302+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/main_dag.py took 0.050 seconds
+[2024-09-25T20:39:09.551+0000] {processor.py:161} INFO - Started process (PID=896) to work on /opt/airflow/dags/main_dag.py
+[2024-09-25T20:39:09.552+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/main_dag.py for tasks to queue
+[2024-09-25T20:39:09.554+0000] {logging_mixin.py:188} INFO - [2024-09-25T20:39:09.553+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/main_dag.py
+[2024-09-25T20:39:09.566+0000] {processor.py:840} INFO - DAG(s) 'AirCrashInvestigation_pipeline' retrieved from /opt/airflow/dags/main_dag.py
+[2024-09-25T20:39:09.587+0000] {logging_mixin.py:188} INFO - [2024-09-25T20:39:09.587+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-09-25T20:39:09.599+0000] {logging_mixin.py:188} INFO - [2024-09-25T20:39:09.598+0000] {dag.py:3954} INFO - Setting next_dagrun for AirCrashInvestigation_pipeline to 2024-09-25 00:00:00+00:00, run_after=2024-09-26 00:00:00+00:00
+[2024-09-25T20:39:09.606+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/main_dag.py took 0.062 seconds
+[2024-09-25T20:39:39.850+0000] {processor.py:161} INFO - Started process (PID=903) to work on /opt/airflow/dags/main_dag.py
+[2024-09-25T20:39:39.851+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/main_dag.py for tasks to queue
+[2024-09-25T20:39:39.853+0000] {logging_mixin.py:188} INFO - [2024-09-25T20:39:39.853+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/main_dag.py
+[2024-09-25T20:39:39.863+0000] {processor.py:840} INFO - DAG(s) 'AirCrashInvestigation_pipeline' retrieved from /opt/airflow/dags/main_dag.py
+[2024-09-25T20:39:39.882+0000] {logging_mixin.py:188} INFO - [2024-09-25T20:39:39.882+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-09-25T20:39:39.895+0000] {logging_mixin.py:188} INFO - [2024-09-25T20:39:39.895+0000] {dag.py:3954} INFO - Setting next_dagrun for AirCrashInvestigation_pipeline to 2024-09-25 00:00:00+00:00, run_after=2024-09-26 00:00:00+00:00
+[2024-09-25T20:39:39.905+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/main_dag.py took 0.060 seconds
+[2024-09-25T20:40:10.178+0000] {processor.py:161} INFO - Started process (PID=910) to work on /opt/airflow/dags/main_dag.py
+[2024-09-25T20:40:10.180+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/main_dag.py for tasks to queue
+[2024-09-25T20:40:10.182+0000] {logging_mixin.py:188} INFO - [2024-09-25T20:40:10.181+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/main_dag.py
+[2024-09-25T20:40:10.194+0000] {processor.py:840} INFO - DAG(s) 'AirCrashInvestigation_pipeline' retrieved from /opt/airflow/dags/main_dag.py
+[2024-09-25T20:40:10.217+0000] {logging_mixin.py:188} INFO - [2024-09-25T20:40:10.216+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-09-25T20:40:10.228+0000] {logging_mixin.py:188} INFO - [2024-09-25T20:40:10.228+0000] {dag.py:3954} INFO - Setting next_dagrun for AirCrashInvestigation_pipeline to 2024-09-25 00:00:00+00:00, run_after=2024-09-26 00:00:00+00:00
+[2024-09-25T20:40:10.237+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/main_dag.py took 0.065 seconds
