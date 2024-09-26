@@ -2,14 +2,29 @@ import boto3
 import configparser
 import csv
 import io
+<<<<<<< Updated upstream
 from io import StringIO
 import pathlib
 
+=======
+import pathlib
+from io import StringIO
+>>>>>>> Stashed changes
 
 
 script_path = pathlib.Path(__file__).parent.resolve()
 config = configparser.ConfigParser()
+<<<<<<< Updated upstream
 config_file_path = script_path / 'pipeline.conf'
+=======
+# Determine the absolute path of the current script
+script_path = pathlib.Path(__file__).parent.resolve()
+
+# Construct the full path to the configuration file
+config_file_path = script_path / 'pipeline.conf'
+
+# Read the configuration file
+>>>>>>> Stashed changes
 config.read(config_file_path)
 
 access = config.get('aws_boto_credentials', 'access_key')
@@ -59,6 +74,7 @@ def saveToS3(data,fname):
         Key=fname,
         Body=csv_buffer.getvalue()
     )
+    print("saved to S3")
 
 def getFromS3(fname):
     s3 = boto3.client('s3', aws_access_key_id=access,
@@ -69,6 +85,21 @@ def getFromS3(fname):
     data = StringIO(file_content)
     return data
 
+
+def readS3file(fname):
+    # Initialize a session using Amazon S3
+    s3_client = boto3.client('s3', aws_access_key_id=access,
+    aws_secret_access_key=secret)
+
+
+    # Fetch the file object from S3
+    response = s3_client.get_object(
+        Bucket='flightcrashdata', 
+        Key=fname)
+    file_content = response['Body'].read().decode('utf-8')
+    data = StringIO(file_content)
+    print("Done reading on S3")
+    return data
 
 
 

@@ -1,6 +1,10 @@
 import requests
 from bs4 import BeautifulSoup
 from time import sleep
+<<<<<<< Updated upstream
+=======
+#from tqdm import tqdm
+>>>>>>> Stashed changes
 import json
 import csv
 from pipelineActions import *
@@ -14,7 +18,12 @@ def main():
     s = "/"
     
     #get date from the all the yearly tables
+<<<<<<< Updated upstream
     for year in (range(1920,1920+1)):
+=======
+    #for year in tqdm(range(1920,2024+1)):
+    for year in (range(1920,2024+1)):
+>>>>>>> Stashed changes
         r = requests.get(url + str(year) + s + str(year) + end)
         soup = BeautifulSoup(r.content, 'html.parser')
         rows = soup.select("table tr")

@@ -1,0 +1,6 @@
+requests
+beautifulsoup4
+tqdm
+pandas
+psycopg2-binary
+boto3

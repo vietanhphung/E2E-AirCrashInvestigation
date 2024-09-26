@@ -16,6 +16,7 @@ with DAG(
 
 ) as dag:
 
+<<<<<<< Updated upstream
     scrape = BashOperator(
         task_id="scrape_LoadS3",
         bash_command="python3 /opt/airflow/tasks/flightDataWebScrape.py",
@@ -35,4 +36,21 @@ with DAG(
  
 
 scrape>>validate>>load
+=======
+    scrape_data = BashOperator(
+        task_id="scrape_loadS3",
+        bash_command="python3 /opt/airflow/tasks/flightDataWebScrape.py",
+    )
+
+    validate_data = BashOperator(
+            task_id="validate_loadS3",
+            bash_command="python3 /opt/airflow/tasks/flightDataWebScrape.py",
+        )
+
+    load_redshift = BashOperator(
+            task_id="loadRedshift",
+            bash_command="python3 /opt/airflow/tasks/flightDataWebScrape.py",
+        )
+>>>>>>> Stashed changes
    
+scrape_data >> validate_data >> load_redshift

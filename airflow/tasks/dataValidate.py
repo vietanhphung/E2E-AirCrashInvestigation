@@ -48,14 +48,18 @@ def convertFormat(o):
 
 
 dataList = []
-
 def dataIngest():
+<<<<<<< Updated upstream
     df = pd.read_csv(getFromS3('bronze.csv')).dropna(how='all') # read and drop all empty rows
+=======
+    df = pd.read_csv(readS3file('bronze.csv')).dropna(how='all') # read and drop all empty rows
+>>>>>>> Stashed changes
     result = df.to_dict(orient='records')
     for d in result:
         if d != {}:
             converted = convertFormat(d)
             dataList.append(converted)
+    print("Data transformed")
 
 
 
