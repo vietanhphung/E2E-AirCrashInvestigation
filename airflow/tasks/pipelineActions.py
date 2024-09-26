@@ -2,10 +2,16 @@ import boto3
 import configparser
 import csv
 import io
+from io import StringIO
+import pathlib
 
 
+
+script_path = pathlib.Path(__file__).parent.resolve()
 config = configparser.ConfigParser()
-config.read('pipeline.conf')
+config_file_path = script_path / 'pipeline.conf'
+config.read(config_file_path)
+
 access = config.get('aws_boto_credentials', 'access_key')
 secret = config.get('aws_boto_credentials', 'secret_key')
 account = config.get('aws_boto_credentials', 'account_id')
@@ -53,6 +59,15 @@ def saveToS3(data,fname):
         Key=fname,
         Body=csv_buffer.getvalue()
     )
+
+def getFromS3(fname):
+    s3 = boto3.client('s3', aws_access_key_id=access,
+    aws_secret_access_key=secret)
+
+    response = s3.get_object(Bucket='flightcrashdata', Key=fname)
+    file_content = response['Body'].read().decode('utf-8')
+    data = StringIO(file_content)
+    return data
 
 
 

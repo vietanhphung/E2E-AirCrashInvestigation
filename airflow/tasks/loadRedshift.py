@@ -2,9 +2,14 @@ import pipelineActions
 import psycopg2
 import boto3
 import configparser
+import pathlib
 
+
+
+script_path = pathlib.Path(__file__).parent.resolve()
 config = configparser.ConfigParser()
-config.read('pipeline.conf')
+config_file_path = script_path / 'pipeline.conf'
+config.read(config_file_path)
 bucket = config.get('aws_boto_credentials', 'bucket_name')
 file =  config.get('aws_boto_credentials', 'file')
 

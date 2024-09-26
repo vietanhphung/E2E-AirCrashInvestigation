@@ -1,7 +1,6 @@
 import requests
 from bs4 import BeautifulSoup
 from time import sleep
-from tqdm import tqdm
 import json
 import csv
 from pipelineActions import *
@@ -15,7 +14,7 @@ def main():
     s = "/"
     
     #get date from the all the yearly tables
-    for year in tqdm(range(1920,2024+1)):
+    for year in (range(1920,1920+1)):
         r = requests.get(url + str(year) + s + str(year) + end)
         soup = BeautifulSoup(r.content, 'html.parser')
         rows = soup.select("table tr")

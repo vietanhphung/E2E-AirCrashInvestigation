@@ -50,7 +50,7 @@ def convertFormat(o):
 dataList = []
 
 def dataIngest():
-    df = pd.read_csv('data.csv').dropna(how='all') # read and drop all empty rows
+    df = pd.read_csv(getFromS3('bronze.csv')).dropna(how='all') # read and drop all empty rows
     result = df.to_dict(orient='records')
     for d in result:
         if d != {}:

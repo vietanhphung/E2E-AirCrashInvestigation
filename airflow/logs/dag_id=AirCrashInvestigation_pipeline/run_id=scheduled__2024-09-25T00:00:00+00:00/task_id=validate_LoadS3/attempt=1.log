@@ -1,0 +1,72 @@
+[2024-09-26T00:01:35.553+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2024-09-26T00:01:35.560+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: AirCrashInvestigation_pipeline.validate_LoadS3 scheduled__2024-09-25T00:00:00+00:00 [queued]>
+[2024-09-26T00:01:35.564+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: AirCrashInvestigation_pipeline.validate_LoadS3 scheduled__2024-09-25T00:00:00+00:00 [queued]>
+[2024-09-26T00:01:35.564+0000] {taskinstance.py:2865} INFO - Starting attempt 1 of 2
+[2024-09-26T00:01:35.569+0000] {taskinstance.py:2888} INFO - Executing <Task(BashOperator): validate_LoadS3> on 2024-09-25 00:00:00+00:00
+[2024-09-26T00:01:35.573+0000] {logging_mixin.py:190} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70 DeprecationWarning: This process (pid=1248) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2024-09-26T00:01:35.573+0000] {standard_task_runner.py:72} INFO - Started process 1249 to run task
+[2024-09-26T00:01:35.573+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'AirCrashInvestigation_pipeline', 'validate_LoadS3', 'scheduled__2024-09-25T00:00:00+00:00', '--job-id', '45', '--raw', '--subdir', 'DAGS_FOLDER/main_dag.py', '--cfg-path', '/tmp/tmpiv8kyk8e']
+[2024-09-26T00:01:35.574+0000] {standard_task_runner.py:105} INFO - Job 45: Subtask validate_LoadS3
+[2024-09-26T00:01:35.596+0000] {task_command.py:467} INFO - Running <TaskInstance: AirCrashInvestigation_pipeline.validate_LoadS3 scheduled__2024-09-25T00:00:00+00:00 [running]> on host fa5d07744004
+[2024-09-26T00:01:35.628+0000] {taskinstance.py:3131} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='AirCrashInvestigation_pipeline' AIRFLOW_CTX_TASK_ID='validate_LoadS3' AIRFLOW_CTX_EXECUTION_DATE='2024-09-25T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-09-25T00:00:00+00:00'
+[2024-09-26T00:01:35.629+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2024-09-26T00:01:35.635+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2024-09-26T00:01:35.636+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', 'python3 /opt/***/tasks/dataValidate.py']
+[2024-09-26T00:01:35.639+0000] {subprocess.py:86} INFO - Output:
+[2024-09-26T00:01:36.726+0000] {subprocess.py:93} INFO - 1718
+[2024-09-26T00:01:36.729+0000] {subprocess.py:93} INFO - None
+[2024-09-26T00:01:36.729+0000] {subprocess.py:93} INFO - 630
+[2024-09-26T00:01:36.729+0000] {subprocess.py:93} INFO - None
+[2024-09-26T00:01:36.729+0000] {subprocess.py:93} INFO - 1830
+[2024-09-26T00:01:36.729+0000] {subprocess.py:93} INFO - 1030
+[2024-09-26T00:01:36.729+0000] {subprocess.py:93} INFO - 100
+[2024-09-26T00:01:36.729+0000] {subprocess.py:93} INFO - 1520
+[2024-09-26T00:01:36.729+0000] {subprocess.py:93} INFO - None
+[2024-09-26T00:01:36.730+0000] {subprocess.py:93} INFO - 100
+[2024-09-26T00:01:36.730+0000] {subprocess.py:93} INFO - 2345
+[2024-09-26T00:01:36.730+0000] {subprocess.py:93} INFO - None
+[2024-09-26T00:01:36.730+0000] {subprocess.py:93} INFO - 2345
+[2024-09-26T00:01:36.730+0000] {subprocess.py:93} INFO - None
+[2024-09-26T00:01:36.730+0000] {subprocess.py:93} INFO - None
+[2024-09-26T00:01:36.730+0000] {subprocess.py:93} INFO - 515
+[2024-09-26T00:01:36.730+0000] {subprocess.py:93} INFO - 845
+[2024-09-26T00:01:36.730+0000] {subprocess.py:93} INFO - None
+[2024-09-26T00:01:36.730+0000] {subprocess.py:93} INFO - 700
+[2024-09-26T00:01:36.730+0000] {subprocess.py:93} INFO - 745
+[2024-09-26T00:01:36.731+0000] {subprocess.py:93} INFO - 2130
+[2024-09-26T00:01:36.732+0000] {subprocess.py:93} INFO - None
+[2024-09-26T00:01:36.733+0000] {subprocess.py:93} INFO - 1000
+[2024-09-26T00:01:36.734+0000] {subprocess.py:93} INFO - None
+[2024-09-26T00:01:36.734+0000] {subprocess.py:93} INFO - None
+[2024-09-26T00:01:36.734+0000] {subprocess.py:93} INFO - None
+[2024-09-26T00:01:36.734+0000] {subprocess.py:93} INFO - 1655
+[2024-09-26T00:01:36.734+0000] {subprocess.py:93} INFO - None
+[2024-09-26T00:01:36.734+0000] {subprocess.py:93} INFO - None
+[2024-09-26T00:01:36.736+0000] {subprocess.py:93} INFO - None
+[2024-09-26T00:01:36.736+0000] {subprocess.py:93} INFO - None
+[2024-09-26T00:01:36.736+0000] {subprocess.py:93} INFO - None
+[2024-09-26T00:01:36.736+0000] {subprocess.py:93} INFO - None
+[2024-09-26T00:01:36.736+0000] {subprocess.py:93} INFO - None
+[2024-09-26T00:01:36.736+0000] {subprocess.py:93} INFO - None
+[2024-09-26T00:01:36.736+0000] {subprocess.py:93} INFO - None
+[2024-09-26T00:01:36.736+0000] {subprocess.py:93} INFO - None
+[2024-09-26T00:01:36.736+0000] {subprocess.py:93} INFO - None
+[2024-09-26T00:01:36.737+0000] {subprocess.py:93} INFO - None
+[2024-09-26T00:01:36.737+0000] {subprocess.py:93} INFO - None
+[2024-09-26T00:01:36.737+0000] {subprocess.py:93} INFO - None
+[2024-09-26T00:01:36.737+0000] {subprocess.py:93} INFO - None
+[2024-09-26T00:01:36.737+0000] {subprocess.py:93} INFO - None
+[2024-09-26T00:01:36.737+0000] {subprocess.py:93} INFO - None
+[2024-09-26T00:01:36.737+0000] {subprocess.py:93} INFO - None
+[2024-09-26T00:01:36.737+0000] {subprocess.py:93} INFO - None
+[2024-09-26T00:01:36.737+0000] {subprocess.py:93} INFO - None
+[2024-09-26T00:01:36.737+0000] {subprocess.py:93} INFO - None
+[2024-09-26T00:01:36.737+0000] {subprocess.py:93} INFO - None
+[2024-09-26T00:01:36.737+0000] {subprocess.py:93} INFO - 1215
+[2024-09-26T00:01:36.739+0000] {subprocess.py:93} INFO - None
+[2024-09-26T00:01:36.814+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2024-09-26T00:01:36.827+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2024-09-26T00:01:36.827+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=AirCrashInvestigation_pipeline, task_id=validate_LoadS3, run_id=scheduled__2024-09-25T00:00:00+00:00, execution_date=20240925T000000, start_date=20240926T000135, end_date=20240926T000136
+[2024-09-26T00:01:36.846+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2024-09-26T00:01:36.857+0000] {taskinstance.py:3900} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2024-09-26T00:01:36.858+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

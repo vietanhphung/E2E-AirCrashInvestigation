@@ -16,9 +16,23 @@ with DAG(
 
 ) as dag:
 
-    scrape_audiophile_data = BashOperator(
-        task_id="scrape",
-        bash_command="python3 /tasks/testcode.py",
+    scrape = BashOperator(
+        task_id="scrape_LoadS3",
+        bash_command="python3 /opt/airflow/tasks/flightDataWebScrape.py",
     )
 
+    validate = BashOperator(
+            task_id="validate_LoadS3",
+            bash_command="python3 /opt/airflow/tasks/dataValidate.py",
+        )
+    
+    load = BashOperator(
+        task_id="loadRedshift",
+        bash_command="python3 /opt/airflow/tasks/loadRedshift.py",
+    )
+
+
+ 
+
+scrape>>validate>>load
    
