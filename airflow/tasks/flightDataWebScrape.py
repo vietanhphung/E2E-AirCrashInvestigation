@@ -13,7 +13,7 @@ def main():
     s = "/"
     
     #get date from the all the yearly tables
-    for year in (range(1920,1950+1)):
+    for year in (range(1920,2024+1)):
         try: 
             r = requests.get(url + str(year) + s + str(year) + end)
             sleep(2)

@@ -26,6 +26,8 @@ Before running the project, ensure that the following tools are installed on you
 Additional Notes
 Ensure your AWS credentials are correctly configured before running build_infra.
 If any issues arise during the execution of Terraform or Docker commands, consult the logs or verify your AWS permissions and Docker installation.
+flightDataWebScrape.py would slowly extract data on website to ensure not exceeding request limit, this process would take around 3 hours.
+
 
 ###### Run Pipeline ######
 
