@@ -2,45 +2,31 @@ import boto3
 import configparser
 import csv
 import io
-<<<<<<< Updated upstream
 from io import StringIO
 import pathlib
-
-=======
-import pathlib
-from io import StringIO
->>>>>>> Stashed changes
+from dotenv import dotenv_values
 
 
+configuration_path = pathlib.Path(__file__).parent.resolve()
 script_path = pathlib.Path(__file__).parent.resolve()
-config = configparser.ConfigParser()
-<<<<<<< Updated upstream
-config_file_path = script_path / 'pipeline.conf'
-=======
-# Determine the absolute path of the current script
+config = dotenv_values(f"{configuration_path}/pipeline.conf")
+
+bucket=config["bucket_name"]
+host=config["host"]
+port=config["port"]
+dbname=config["dbname"]
+user=config["user"]
+password=config["password"]
+
+configuration_path = pathlib.Path(__file__).parent.resolve()
 script_path = pathlib.Path(__file__).parent.resolve()
+config = dotenv_values(f"{configuration_path}/credentials.conf")
 
-# Construct the full path to the configuration file
-config_file_path = script_path / 'pipeline.conf'
-
-# Read the configuration file
->>>>>>> Stashed changes
-config.read(config_file_path)
-
-access = config.get('aws_boto_credentials', 'access_key')
-secret = config.get('aws_boto_credentials', 'secret_key')
-account = config.get('aws_boto_credentials', 'account_id')
-bucket = config.get('aws_boto_credentials', 'bucket_name')
-
-host = config.get('redshift','host')
-port = config.get('redshift','port')
-dbname = config.get('redshift','dbname')
-user = config.get('redshift','user')
-password = config.get('redshift','password')
+access = config["access_key"]
+secret = config["secret_key"]
 
 
-
-# use locally
+# save file locally
 def loadCSV(data,fname):
     headers = data[0].keys()
     with open(fname, mode='w', newline='') as file:
@@ -55,51 +41,42 @@ def loadCSV(data,fname):
 
 #save to S3 bucket
 def saveToS3(data,fname):
-    s3 = boto3.client('s3', aws_access_key_id=access,
-    aws_secret_access_key=secret)
+    try:
+        s3 = boto3.client('s3', aws_access_key_id=access,
+        aws_secret_access_key=secret)
 
-    csv_buffer = io.StringIO()
+        csv_buffer = io.StringIO()
 
-    # Extract field names (keys) from the first dictionary
-    fieldnames = data[0].keys()
+        # Extract field names (keys) from the first dictionary
+        fieldnames = data[0].keys()
 
-    # Write the list of dictionaries to the buffer as CSV
-    writer = csv.DictWriter(csv_buffer, fieldnames=fieldnames)
-    writer.writeheader()
-    writer.writerows(data)
+        # Write the list of dictionaries to the buffer as CSV
+        writer = csv.DictWriter(csv_buffer, fieldnames=fieldnames)
+        writer.writeheader()
+        writer.writerows(data)
 
-    # Upload CSV data from buffer to S3
-    s3.put_object(
-        Bucket='flightcrashdata',
-        Key=fname,
-        Body=csv_buffer.getvalue()
-    )
-    print("saved to S3")
+        # Upload CSV data from buffer to S3
+        s3.put_object(
+            Bucket=bucket,
+            Key=fname,
+            Body=csv_buffer.getvalue()
+        )
+        print("Data saved to S3")
+    except:
+        print("Error, input may be []")
 
+
+#read file from S3
 def getFromS3(fname):
     s3 = boto3.client('s3', aws_access_key_id=access,
     aws_secret_access_key=secret)
 
-    response = s3.get_object(Bucket='flightcrashdata', Key=fname)
+    response = s3.get_object(Bucket=bucket, Key=fname)
     file_content = response['Body'].read().decode('utf-8')
     data = StringIO(file_content)
+    print('data from S3 extracted')
     return data
 
-
-def readS3file(fname):
-    # Initialize a session using Amazon S3
-    s3_client = boto3.client('s3', aws_access_key_id=access,
-    aws_secret_access_key=secret)
-
-
-    # Fetch the file object from S3
-    response = s3_client.get_object(
-        Bucket='flightcrashdata', 
-        Key=fname)
-    file_content = response['Body'].read().decode('utf-8')
-    data = StringIO(file_content)
-    print("Done reading on S3")
-    return data
 
 
 

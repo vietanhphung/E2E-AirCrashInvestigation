@@ -1,0 +1,27 @@
+[2024-09-29T03:55:04.288+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2024-09-29T03:55:04.302+0000] {taskinstance.py:2073} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: AirCrashInvestigation_pipeline.loadRedshift manual__2024-09-29T03:52:51.198956+00:00 [queued]>
+[2024-09-29T03:55:04.306+0000] {taskinstance.py:2073} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: AirCrashInvestigation_pipeline.loadRedshift manual__2024-09-29T03:52:51.198956+00:00 [queued]>
+[2024-09-29T03:55:04.306+0000] {taskinstance.py:2303} INFO - Starting attempt 1 of 2
+[2024-09-29T03:55:04.313+0000] {taskinstance.py:2327} INFO - Executing <Task(BashOperator): loadRedshift> on 2024-09-29 03:52:51.198956+00:00
+[2024-09-29T03:55:04.316+0000] {warnings.py:110} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61: DeprecationWarning: This process (pid=982) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2024-09-29T03:55:04.317+0000] {standard_task_runner.py:63} INFO - Started process 983 to run task
+[2024-09-29T03:55:04.317+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'AirCrashInvestigation_pipeline', 'loadRedshift', 'manual__2024-09-29T03:52:51.198956+00:00', '--job-id', '48', '--raw', '--subdir', 'DAGS_FOLDER/main_dag.py', '--cfg-path', '/tmp/tmp1ruefa_0']
+[2024-09-29T03:55:04.319+0000] {standard_task_runner.py:91} INFO - Job 48: Subtask loadRedshift
+[2024-09-29T03:55:04.343+0000] {task_command.py:426} INFO - Running <TaskInstance: AirCrashInvestigation_pipeline.loadRedshift manual__2024-09-29T03:52:51.198956+00:00 [running]> on host 2e7d9707a826
+[2024-09-29T03:55:04.387+0000] {taskinstance.py:2644} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='AirCrashInvestigation_pipeline' AIRFLOW_CTX_TASK_ID='loadRedshift' AIRFLOW_CTX_EXECUTION_DATE='2024-09-29T03:52:51.198956+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-09-29T03:52:51.198956+00:00'
+[2024-09-29T03:55:04.387+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2024-09-29T03:55:04.394+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2024-09-29T03:55:04.394+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', 'python3 /opt/***/tasks/loadRedshift.py']
+[2024-09-29T03:55:04.399+0000] {subprocess.py:86} INFO - Output:
+[2024-09-29T03:55:06.014+0000] {subprocess.py:93} INFO - Connected to Redshift
+[2024-09-29T03:55:06.017+0000] {subprocess.py:93} INFO - Created table
+[2024-09-29T03:55:06.018+0000] {subprocess.py:93} INFO - Error: name 'copy_query' is not defined
+[2024-09-29T03:55:06.019+0000] {subprocess.py:93} INFO - Redshift connection closed
+[2024-09-29T03:55:06.052+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2024-09-29T03:55:06.053+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2024-09-29T03:55:06.071+0000] {taskinstance.py:1205} INFO - Marking task as SUCCESS. dag_id=AirCrashInvestigation_pipeline, task_id=loadRedshift, execution_date=20240929T035251, start_date=20240929T035504, end_date=20240929T035506
+[2024-09-29T03:55:06.089+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2024-09-29T03:55:06.099+0000] {taskinstance.py:3482} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-09-29T03:55:06.100+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

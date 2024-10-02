@@ -1,0 +1,55 @@
+[2024-10-02T02:42:39.861+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2024-10-02T02:42:39.873+0000] {taskinstance.py:2073} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: AirCrashInvestigation_pipeline.scrape_LoadS3 manual__2024-10-02T02:42:39.372817+00:00 [queued]>
+[2024-10-02T02:42:39.878+0000] {taskinstance.py:2073} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: AirCrashInvestigation_pipeline.scrape_LoadS3 manual__2024-10-02T02:42:39.372817+00:00 [queued]>
+[2024-10-02T02:42:39.878+0000] {taskinstance.py:2303} INFO - Starting attempt 1 of 2
+[2024-10-02T02:42:39.886+0000] {taskinstance.py:2327} INFO - Executing <Task(BashOperator): scrape_LoadS3> on 2024-10-02 02:42:39.372817+00:00
+[2024-10-02T02:42:39.889+0000] {warnings.py:110} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61: DeprecationWarning: This process (pid=576) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2024-10-02T02:42:39.890+0000] {standard_task_runner.py:63} INFO - Started process 577 to run task
+[2024-10-02T02:42:39.890+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'AirCrashInvestigation_pipeline', 'scrape_LoadS3', 'manual__2024-10-02T02:42:39.372817+00:00', '--job-id', '26', '--raw', '--subdir', 'DAGS_FOLDER/main_dag.py', '--cfg-path', '/tmp/tmp_h8ml35j']
+[2024-10-02T02:42:39.892+0000] {standard_task_runner.py:91} INFO - Job 26: Subtask scrape_LoadS3
+[2024-10-02T02:42:39.921+0000] {task_command.py:426} INFO - Running <TaskInstance: AirCrashInvestigation_pipeline.scrape_LoadS3 manual__2024-10-02T02:42:39.372817+00:00 [running]> on host ac8ffcfe4778
+[2024-10-02T02:42:39.966+0000] {taskinstance.py:2644} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='AirCrashInvestigation_pipeline' AIRFLOW_CTX_TASK_ID='scrape_LoadS3' AIRFLOW_CTX_EXECUTION_DATE='2024-10-02T02:42:39.372817+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-10-02T02:42:39.372817+00:00'
+[2024-10-02T02:42:39.966+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2024-10-02T02:42:39.973+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2024-10-02T02:42:39.974+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', 'python3 /opt/***/tasks/flightDataWebScrape.py']
+[2024-10-02T02:42:39.979+0000] {subprocess.py:86} INFO - Output:
+[2024-10-02T03:53:01.053+0000] {subprocess.py:93} INFO - 1920 data accessed
+[2024-10-02T03:53:01.054+0000] {subprocess.py:93} INFO - 1921 data accessed
+[2024-10-02T03:53:01.054+0000] {subprocess.py:93} INFO - 1922 data accessed
+[2024-10-02T03:53:01.055+0000] {subprocess.py:93} INFO - 1923 data accessed
+[2024-10-02T03:53:01.055+0000] {subprocess.py:93} INFO - 1924 data accessed
+[2024-10-02T03:53:01.055+0000] {subprocess.py:93} INFO - 1925 data accessed
+[2024-10-02T03:53:01.056+0000] {subprocess.py:93} INFO - 1926 data accessed
+[2024-10-02T03:53:01.056+0000] {subprocess.py:93} INFO - 1927 data accessed
+[2024-10-02T03:53:01.056+0000] {subprocess.py:93} INFO - 1928 data accessed
+[2024-10-02T03:53:01.056+0000] {subprocess.py:93} INFO - 1929 data accessed
+[2024-10-02T03:53:01.057+0000] {subprocess.py:93} INFO - 1930 data accessed
+[2024-10-02T03:53:01.057+0000] {subprocess.py:93} INFO - 1931 data accessed
+[2024-10-02T03:53:01.057+0000] {subprocess.py:93} INFO - 1932 data accessed
+[2024-10-02T03:53:01.057+0000] {subprocess.py:93} INFO - 1933 data accessed
+[2024-10-02T03:53:01.057+0000] {subprocess.py:93} INFO - 1934 data accessed
+[2024-10-02T03:53:01.057+0000] {subprocess.py:93} INFO - 1935 data accessed
+[2024-10-02T03:53:01.058+0000] {subprocess.py:93} INFO - 1936 data accessed
+[2024-10-02T03:53:01.058+0000] {subprocess.py:93} INFO - 1937 data accessed
+[2024-10-02T03:53:01.058+0000] {subprocess.py:93} INFO - 1938 data accessed
+[2024-10-02T03:53:01.058+0000] {subprocess.py:93} INFO - 1939 data accessed
+[2024-10-02T03:53:01.058+0000] {subprocess.py:93} INFO - 1940 data accessed
+[2024-10-02T03:53:01.058+0000] {subprocess.py:93} INFO - 1941 data accessed
+[2024-10-02T03:53:01.059+0000] {subprocess.py:93} INFO - 1942 data accessed
+[2024-10-02T03:53:01.059+0000] {subprocess.py:93} INFO - 1943 data accessed
+[2024-10-02T03:53:01.059+0000] {subprocess.py:93} INFO - 1944 data accessed
+[2024-10-02T03:53:01.059+0000] {subprocess.py:93} INFO - 1945 data accessed
+[2024-10-02T03:53:01.060+0000] {subprocess.py:93} INFO - 1946 data accessed
+[2024-10-02T03:53:01.060+0000] {subprocess.py:93} INFO - 1947 data accessed
+[2024-10-02T03:53:01.060+0000] {subprocess.py:93} INFO - 1948 data accessed
+[2024-10-02T03:53:01.060+0000] {subprocess.py:93} INFO - 1949 data accessed
+[2024-10-02T03:53:01.061+0000] {subprocess.py:93} INFO - 1950 data accessed
+[2024-10-02T03:53:01.061+0000] {subprocess.py:93} INFO - Data saved to S3
+[2024-10-02T03:53:01.134+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2024-10-02T03:53:01.135+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2024-10-02T03:53:01.149+0000] {taskinstance.py:1205} INFO - Marking task as SUCCESS. dag_id=AirCrashInvestigation_pipeline, task_id=scrape_LoadS3, execution_date=20241002T024239, start_date=20241002T024239, end_date=20241002T035301
+[2024-10-02T03:53:01.192+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2024-10-02T03:53:01.206+0000] {taskinstance.py:3482} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2024-10-02T03:53:01.207+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

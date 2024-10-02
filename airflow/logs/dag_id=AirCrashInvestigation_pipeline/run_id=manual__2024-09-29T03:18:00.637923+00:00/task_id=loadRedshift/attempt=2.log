@@ -1,0 +1,26 @@
+[2024-09-29T03:38:06.068+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2024-09-29T03:38:06.082+0000] {taskinstance.py:2073} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: AirCrashInvestigation_pipeline.loadRedshift manual__2024-09-29T03:18:00.637923+00:00 [queued]>
+[2024-09-29T03:38:06.086+0000] {taskinstance.py:2073} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: AirCrashInvestigation_pipeline.loadRedshift manual__2024-09-29T03:18:00.637923+00:00 [queued]>
+[2024-09-29T03:38:06.086+0000] {taskinstance.py:2303} INFO - Starting attempt 2 of 3
+[2024-09-29T03:38:06.094+0000] {taskinstance.py:2327} INFO - Executing <Task(BashOperator): loadRedshift> on 2024-09-29 03:18:00.637923+00:00
+[2024-09-29T03:38:06.097+0000] {warnings.py:110} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61: DeprecationWarning: This process (pid=746) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2024-09-29T03:38:06.098+0000] {standard_task_runner.py:63} INFO - Started process 747 to run task
+[2024-09-29T03:38:06.098+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'AirCrashInvestigation_pipeline', 'loadRedshift', 'manual__2024-09-29T03:18:00.637923+00:00', '--job-id', '42', '--raw', '--subdir', 'DAGS_FOLDER/main_dag.py', '--cfg-path', '/tmp/tmp51k4n4w_']
+[2024-09-29T03:38:06.100+0000] {standard_task_runner.py:91} INFO - Job 42: Subtask loadRedshift
+[2024-09-29T03:38:06.124+0000] {task_command.py:426} INFO - Running <TaskInstance: AirCrashInvestigation_pipeline.loadRedshift manual__2024-09-29T03:18:00.637923+00:00 [running]> on host 2e7d9707a826
+[2024-09-29T03:38:06.164+0000] {taskinstance.py:2644} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='AirCrashInvestigation_pipeline' AIRFLOW_CTX_TASK_ID='loadRedshift' AIRFLOW_CTX_EXECUTION_DATE='2024-09-29T03:18:00.637923+00:00' AIRFLOW_CTX_TRY_NUMBER='2' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-09-29T03:18:00.637923+00:00'
+[2024-09-29T03:38:06.164+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2024-09-29T03:38:06.173+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2024-09-29T03:38:06.174+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', 'python3 /opt/***/tasks/loadRedshift.py']
+[2024-09-29T03:38:06.179+0000] {subprocess.py:86} INFO - Output:
+[2024-09-29T03:39:21.695+0000] {local_task_job_runner.py:310} WARNING - State of this instance has been externally set to failed. Terminating instance.
+[2024-09-29T03:39:21.697+0000] {local_task_job_runner.py:222} INFO - ::endgroup::
+[2024-09-29T03:39:21.697+0000] {process_utils.py:132} INFO - Sending 15 to group 747. PIDs of all processes in the group: [748, 747]
+[2024-09-29T03:39:21.699+0000] {process_utils.py:87} INFO - Sending the signal 15 to group 747
+[2024-09-29T03:39:21.700+0000] {taskinstance.py:2607} ERROR - Received SIGTERM. Terminating subprocesses.
+[2024-09-29T03:39:21.700+0000] {subprocess.py:104} INFO - Sending SIGTERM signal to process group
+[2024-09-29T03:39:21.703+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2024-09-29T03:39:21.757+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=747, status='terminated', exitcode=0, started='03:38:05') (747) terminated with exit code 0
+[2024-09-29T03:39:21.757+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=748, status='terminated', started='03:38:05') (748) terminated with exit code None

@@ -1,0 +1,547 @@
+[2024-09-29T02:31:32.108+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2024-09-29T02:31:32.120+0000] {taskinstance.py:2073} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: AirCrashInvestigation_pipeline.scrape_LoadS3 manual__2024-09-29T02:31:31.344713+00:00 [queued]>
+[2024-09-29T02:31:32.124+0000] {taskinstance.py:2073} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: AirCrashInvestigation_pipeline.scrape_LoadS3 manual__2024-09-29T02:31:31.344713+00:00 [queued]>
+[2024-09-29T02:31:32.124+0000] {taskinstance.py:2303} INFO - Starting attempt 1 of 2
+[2024-09-29T02:31:32.132+0000] {taskinstance.py:2327} INFO - Executing <Task(BashOperator): scrape_LoadS3> on 2024-09-29 02:31:31.344713+00:00
+[2024-09-29T02:31:32.135+0000] {warnings.py:110} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61: DeprecationWarning: This process (pid=390) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2024-09-29T02:31:32.135+0000] {standard_task_runner.py:63} INFO - Started process 391 to run task
+[2024-09-29T02:31:32.136+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'AirCrashInvestigation_pipeline', 'scrape_LoadS3', 'manual__2024-09-29T02:31:31.344713+00:00', '--job-id', '22', '--raw', '--subdir', 'DAGS_FOLDER/main_dag.py', '--cfg-path', '/tmp/tmp79elrl_h']
+[2024-09-29T02:31:32.137+0000] {standard_task_runner.py:91} INFO - Job 22: Subtask scrape_LoadS3
+[2024-09-29T02:31:32.167+0000] {task_command.py:426} INFO - Running <TaskInstance: AirCrashInvestigation_pipeline.scrape_LoadS3 manual__2024-09-29T02:31:31.344713+00:00 [running]> on host 7b437d7ff517
+[2024-09-29T02:31:32.217+0000] {taskinstance.py:2644} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='AirCrashInvestigation_pipeline' AIRFLOW_CTX_TASK_ID='scrape_LoadS3' AIRFLOW_CTX_EXECUTION_DATE='2024-09-29T02:31:31.344713+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-09-29T02:31:31.344713+00:00'
+[2024-09-29T02:31:32.218+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2024-09-29T02:31:32.226+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2024-09-29T02:31:32.226+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', 'python3 /opt/***/tasks/flightDataWebScrape.py']
+[2024-09-29T02:31:32.232+0000] {subprocess.py:86} INFO - Output:
+[2024-09-29T02:31:32.845+0000] {subprocess.py:93} INFO - <html>
+[2024-09-29T02:31:32.845+0000] {subprocess.py:93} INFO - <head>
+[2024-09-29T02:31:32.845+0000] {subprocess.py:93} INFO - <meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+[2024-09-29T02:31:32.846+0000] {subprocess.py:93} INFO - <meta content="Microsoft FrontPage 4.0" name="GENERATOR"/>
+[2024-09-29T02:31:32.846+0000] {subprocess.py:93} INFO - <meta content="Aviation accidents" name="description"/>
+[2024-09-29T02:31:32.846+0000] {subprocess.py:93} INFO - <meta content="aircraft accident, plane crash, aviation disaster, safety, aviation safety, aviation accident, airplane crashes, aviation, disasters, accidents, accident, airplane, aircraft, plane, statistics, airline statistics, airline, airlines, hijack, pilot, probable cause, crash, boeing, cockpit, planecrashinfo.com, airbus, famous, fatal, risk, injury, death, flight" name="keywords"/>
+[2024-09-29T02:31:32.846+0000] {subprocess.py:93} INFO - <meta content="FrontPage.Editor.Document" name="ProgId"/>
+[2024-09-29T02:31:32.846+0000] {subprocess.py:93} INFO - <meta content="Aviations accidents 1920" name="Title"/>
+[2024-09-29T02:31:32.847+0000] {subprocess.py:93} INFO - <title>1920</title>
+[2024-09-29T02:31:32.847+0000] {subprocess.py:93} INFO - </head>
+[2024-09-29T02:31:32.847+0000] {subprocess.py:93} INFO - <html>
+[2024-09-29T02:31:32.847+0000] {subprocess.py:93} INFO - <head>
+[2024-09-29T02:31:32.847+0000] {subprocess.py:93} INFO - <meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+[2024-09-29T02:31:32.848+0000] {subprocess.py:93} INFO - <meta content="Microsoft FrontPage 4.0" name="GENERATOR"/>
+[2024-09-29T02:31:32.848+0000] {subprocess.py:93} INFO - <meta content="Aviation accidents" name="description"/>
+[2024-09-29T02:31:32.848+0000] {subprocess.py:93} INFO - <meta content="aircraft accident, plane crash, aviation disaster, safety, aviation safety, aviation accident, airplane crashes, aviation, disasters, accidents, accident, airplane, aircraft, plane, statistics, airline statistics, airline, airlines, hijack, pilot, probable cause, crash, boeing, cockpit, planecrashinfo.com, airbus, famous, fatal, risk, injury, death, flight" name="keywords"/>
+[2024-09-29T02:31:32.848+0000] {subprocess.py:93} INFO - <meta content="FrontPage.Editor.Document" name="ProgId"/>
+[2024-09-29T02:31:32.848+0000] {subprocess.py:93} INFO - <meta content="Aviations accidents 1920" name="Title"/>
+[2024-09-29T02:31:32.849+0000] {subprocess.py:93} INFO - <title>1920</title>
+[2024-09-29T02:31:32.849+0000] {subprocess.py:93} INFO - </head>
+[2024-09-29T02:31:32.849+0000] {subprocess.py:93} INFO - <body>
+[2024-09-29T02:31:32.849+0000] {subprocess.py:93} INFO - <p align="center"><b><font color="#B0B6FF" face="Arial" size="5">1920</font></b></p>
+[2024-09-29T02:31:32.850+0000] {subprocess.py:93} INFO - <div align="center">
+[2024-09-29T02:31:32.850+0000] {subprocess.py:93} INFO - <center>
+[2024-09-29T02:31:32.850+0000] {subprocess.py:93} INFO - <table border="1" cellpadding="4" cellspacing="0" width="700">
+[2024-09-29T02:31:32.850+0000] {subprocess.py:93} INFO - <tr>
+[2024-09-29T02:31:32.850+0000] {subprocess.py:93} INFO - <td align="left" bgcolor="#B0B6FF" width="75"><b><font face="Arial" size="2">Date</font></b></td>
+[2024-09-29T02:31:32.850+0000] {subprocess.py:93} INFO - <td align="left" bgcolor="#B0B6FF"><font face="Arial" size="2"><b>Location / Operator</b></font></td>
+[2024-09-29T02:31:32.851+0000] {subprocess.py:93} INFO - <td align="left" bgcolor="#B0B6FF"><font face="Arial" size="2"><b>Aircraft Type / Registration</b></font></td>
+[2024-09-29T02:31:32.851+0000] {subprocess.py:93} INFO - <td align="right" bgcolor="#B0B6FF"><font face="Arial" size="2"><b>Fatalities</b></font></td>
+[2024-09-29T02:31:32.851+0000] {subprocess.py:93} INFO - </tr>
+[2024-09-29T02:31:32.851+0000] {subprocess.py:93} INFO - <tr bgcolor="DCDCDC">
+[2024-09-29T02:31:32.851+0000] {subprocess.py:93} INFO - <td align="left" valign="top" width="85"><font face="Arial" size="2"><a href="1920-1.htm">17 Sep 1908</a></font></td>
+[2024-09-29T02:31:32.851+0000] {subprocess.py:93} INFO - <td align="left" valign="top"><font face="Arial" size="2">Fort Myer, Virginia<br/>Military - U.S. Army
+[2024-09-29T02:31:32.852+0000] {subprocess.py:93} INFO - </font></td>
+[2024-09-29T02:31:32.852+0000] {subprocess.py:93} INFO - <td align="left" valign="top"><font face="Arial" size="2">Wright Flyer III<br/>?</font></td>
+[2024-09-29T02:31:32.852+0000] {subprocess.py:93} INFO - <td align="right" valign="top" width="1"><font face="Arial" size="2">1/2(0)</font></td>
+[2024-09-29T02:31:32.852+0000] {subprocess.py:93} INFO - </tr>
+[2024-09-29T02:31:32.852+0000] {subprocess.py:93} INFO - <tr bgcolor="WHITE">
+[2024-09-29T02:31:32.852+0000] {subprocess.py:93} INFO - <td align="left" valign="top" width="85"><font face="Arial" size="2"><a href="1920-2.htm">07 Sep 1909</a></font></td>
+[2024-09-29T02:31:32.852+0000] {subprocess.py:93} INFO - <td align="left" valign="top"><font face="Arial" size="2">Juvisy-sur-Orge, France<br/>?
+[2024-09-29T02:31:32.853+0000] {subprocess.py:93} INFO - </font></td>
+[2024-09-29T02:31:32.853+0000] {subprocess.py:93} INFO - <td align="left" valign="top"><font face="Arial" size="2">Wright Byplane<br/>SC1</font></td>
+[2024-09-29T02:31:32.853+0000] {subprocess.py:93} INFO - <td align="right" valign="top" width="1"><font face="Arial" size="2">1/1(0)</font></td>
+[2024-09-29T02:31:32.853+0000] {subprocess.py:93} INFO - </tr>
+[2024-09-29T02:31:32.853+0000] {subprocess.py:93} INFO - <tr bgcolor="DCDCDC">
+[2024-09-29T02:31:32.853+0000] {subprocess.py:93} INFO - <td align="left" valign="top" width="85"><font face="Arial" size="2"><a href="1920-3.htm">12 Jul 1912</a></font></td>
+[2024-09-29T02:31:32.854+0000] {subprocess.py:93} INFO - <td align="left" valign="top"><font face="Arial" size="2">Atlantic City, New Jersey<br/>Military - U.S. Navy
+[2024-09-29T02:31:32.854+0000] {subprocess.py:93} INFO - </font></td>
+[2024-09-29T02:31:32.854+0000] {subprocess.py:93} INFO - <td align="left" valign="top"><font face="Arial" size="2">Dirigible<br/>?</font></td>
+[2024-09-29T02:31:32.854+0000] {subprocess.py:93} INFO - <td align="right" valign="top" width="1"><font face="Arial" size="2">5/5(0)</font></td>
+[2024-09-29T02:31:32.854+0000] {subprocess.py:93} INFO - </tr>
+[2024-09-29T02:31:32.854+0000] {subprocess.py:93} INFO - <tr bgcolor="WHITE">
+[2024-09-29T02:31:32.855+0000] {subprocess.py:93} INFO - <td align="left" valign="top" width="85"><font face="Arial" size="2"><a href="1920-4.htm">06 Aug 1913</a></font></td>
+[2024-09-29T02:31:32.855+0000] {subprocess.py:93} INFO - <td align="left" valign="top"><font face="Arial" size="2">Victoria, British Columbia, Canada<br/>Private
+[2024-09-29T02:31:32.855+0000] {subprocess.py:93} INFO - </font></td>
+[2024-09-29T02:31:32.855+0000] {subprocess.py:93} INFO - <td align="left" valign="top"><font face="Arial" size="2">Curtiss seaplane<br/>?</font></td>
+[2024-09-29T02:31:32.855+0000] {subprocess.py:93} INFO - <td align="right" valign="top" width="1"><font face="Arial" size="2">1/1(0)</font></td>
+[2024-09-29T02:31:32.855+0000] {subprocess.py:93} INFO - </tr>
+[2024-09-29T02:31:32.855+0000] {subprocess.py:93} INFO - <tr bgcolor="DCDCDC">
+[2024-09-29T02:31:32.855+0000] {subprocess.py:93} INFO - <td align="left" valign="top" width="85"><font face="Arial" size="2"><a href="1920-5.htm">09 Sep 1913</a></font></td>
+[2024-09-29T02:31:32.855+0000] {subprocess.py:93} INFO - <td align="left" valign="top"><font face="Arial" size="2">Over the North Sea<br/>Military - German Navy
+[2024-09-29T02:31:32.856+0000] {subprocess.py:93} INFO - </font></td>
+[2024-09-29T02:31:32.856+0000] {subprocess.py:93} INFO - <td align="left" valign="top"><font face="Arial" size="2">Zeppelin L-1 (airship)<br/>?</font></td>
+[2024-09-29T02:31:32.856+0000] {subprocess.py:93} INFO - <td align="right" valign="top" width="1"><font face="Arial" size="2">14/20(0)</font></td>
+[2024-09-29T02:31:32.856+0000] {subprocess.py:93} INFO - </tr>
+[2024-09-29T02:31:32.856+0000] {subprocess.py:93} INFO - <tr bgcolor="WHITE">
+[2024-09-29T02:31:32.856+0000] {subprocess.py:93} INFO - <td align="left" valign="top" width="85"><font face="Arial" size="2"><a href="1920-6.htm">17 Oct 1913</a></font></td>
+[2024-09-29T02:31:32.856+0000] {subprocess.py:93} INFO - <td align="left" valign="top"><font face="Arial" size="2">Near Johannisthal, Germany<br/>Military - German Navy
+[2024-09-29T02:31:32.856+0000] {subprocess.py:93} INFO - </font></td>
+[2024-09-29T02:31:32.857+0000] {subprocess.py:93} INFO - <td align="left" valign="top"><font face="Arial" size="2">Zeppelin L-2 (airship)<br/>?</font></td>
+[2024-09-29T02:31:32.857+0000] {subprocess.py:93} INFO - <td align="right" valign="top" width="1"><font face="Arial" size="2">28/28(0)</font></td>
+[2024-09-29T02:31:32.857+0000] {subprocess.py:93} INFO - </tr>
+[2024-09-29T02:31:32.857+0000] {subprocess.py:93} INFO - <tr bgcolor="DCDCDC">
+[2024-09-29T02:31:32.857+0000] {subprocess.py:93} INFO - <td align="left" valign="top" width="85"><font face="Arial" size="2"><a href="1920-7.htm">05 Mar 1915</a></font></td>
+[2024-09-29T02:31:32.857+0000] {subprocess.py:93} INFO - <td align="left" valign="top"><font face="Arial" size="2">Tienen, Belgium<br/>Military - German Navy
+[2024-09-29T02:31:32.857+0000] {subprocess.py:93} INFO - </font></td>
+[2024-09-29T02:31:32.857+0000] {subprocess.py:93} INFO - <td align="left" valign="top"><font face="Arial" size="2">Zeppelin L-8 (airship)<br/>?</font></td>
+[2024-09-29T02:31:32.858+0000] {subprocess.py:93} INFO - <td align="right" valign="top" width="1"><font face="Arial" size="2">17/41(0)</font></td>
+[2024-09-29T02:31:32.858+0000] {subprocess.py:93} INFO - </tr>
+[2024-09-29T02:31:32.858+0000] {subprocess.py:93} INFO - <tr bgcolor="WHITE">
+[2024-09-29T02:31:32.858+0000] {subprocess.py:93} INFO - <td align="left" valign="top" width="85"><font face="Arial" size="2"><a href="1920-8.htm">03 Sep 1915</a></font></td>
+[2024-09-29T02:31:32.858+0000] {subprocess.py:93} INFO - <td align="left" valign="top"><font face="Arial" size="2">Off Cuxhaven, Germany<br/>Military - German Navy
+[2024-09-29T02:31:32.858+0000] {subprocess.py:93} INFO - </font></td>
+[2024-09-29T02:31:32.858+0000] {subprocess.py:93} INFO - <td align="left" valign="top"><font face="Arial" size="2">Zeppelin L-10 (airship)<br/>?</font></td>
+[2024-09-29T02:31:32.858+0000] {subprocess.py:93} INFO - <td align="right" valign="top" width="1"><font face="Arial" size="2">19/19(0)</font></td>
+[2024-09-29T02:31:32.859+0000] {subprocess.py:93} INFO - </tr>
+[2024-09-29T02:31:32.859+0000] {subprocess.py:93} INFO - <tr bgcolor="DCDCDC">
+[2024-09-29T02:31:32.860+0000] {subprocess.py:93} INFO - <td align="left" valign="top" width="85"><font face="Arial" size="2"><a href="1920-9.htm">28 Jul 1916</a></font></td>
+[2024-09-29T02:31:32.860+0000] {subprocess.py:93} INFO - <td align="left" valign="top"><font face="Arial" size="2">Near Jambol, Bulgeria<br/>Military - German Army
+[2024-09-29T02:31:32.860+0000] {subprocess.py:93} INFO - </font></td>
+[2024-09-29T02:31:32.860+0000] {subprocess.py:93} INFO - <td align="left" valign="top"><font face="Arial" size="2">Schutte-Lanz S-L-10 (airship)<br/>?</font></td>
+[2024-09-29T02:31:32.860+0000] {subprocess.py:93} INFO - <td align="right" valign="top" width="1"><font face="Arial" size="2">20/20(0)</font></td>
+[2024-09-29T02:31:32.860+0000] {subprocess.py:93} INFO - </tr>
+[2024-09-29T02:31:32.860+0000] {subprocess.py:93} INFO - <tr bgcolor="WHITE">
+[2024-09-29T02:31:32.861+0000] {subprocess.py:93} INFO - <td align="left" valign="top" width="85"><font face="Arial" size="2"><a href="1920-10.htm">24 Sep 1916</a></font></td>
+[2024-09-29T02:31:32.861+0000] {subprocess.py:93} INFO - <td align="left" valign="top"><font face="Arial" size="2">Billericay, England<br/>Military - German Navy
+[2024-09-29T02:31:32.861+0000] {subprocess.py:93} INFO - </font></td>
+[2024-09-29T02:31:32.861+0000] {subprocess.py:93} INFO - <td align="left" valign="top"><font face="Arial" size="2">Zeppelin L-32 (airship)<br/>?</font></td>
+[2024-09-29T02:31:32.861+0000] {subprocess.py:93} INFO - <td align="right" valign="top" width="1"><font face="Arial" size="2">22/22(0)</font></td>
+[2024-09-29T02:31:32.861+0000] {subprocess.py:93} INFO - </tr>
+[2024-09-29T02:31:32.862+0000] {subprocess.py:93} INFO - <tr bgcolor="DCDCDC">
+[2024-09-29T02:31:32.862+0000] {subprocess.py:93} INFO - <td align="left" valign="top" width="85"><font face="Arial" size="2"><a href="1920-11.htm">01 Oct 1916</a></font></td>
+[2024-09-29T02:31:32.862+0000] {subprocess.py:93} INFO - <td align="left" valign="top"><font face="Arial" size="2">Potters Bar, England<br/>Military - German Navy
+[2024-09-29T02:31:32.862+0000] {subprocess.py:93} INFO - </font></td>
+[2024-09-29T02:31:32.862+0000] {subprocess.py:93} INFO - <td align="left" valign="top"><font face="Arial" size="2">Zeppelin L-31 (airship)<br/>?</font></td>
+[2024-09-29T02:31:32.862+0000] {subprocess.py:93} INFO - <td align="right" valign="top" width="1"><font face="Arial" size="2">19/19(0)</font></td>
+[2024-09-29T02:31:32.862+0000] {subprocess.py:93} INFO - </tr>
+[2024-09-29T02:31:32.862+0000] {subprocess.py:93} INFO - <tr bgcolor="WHITE">
+[2024-09-29T02:31:32.863+0000] {subprocess.py:93} INFO - <td align="left" valign="top" width="85"><font face="Arial" size="2"><a href="1920-12.htm">21 Nov 1916</a></font></td>
+[2024-09-29T02:31:32.863+0000] {subprocess.py:93} INFO - <td align="left" valign="top"><font face="Arial" size="2">Mainz, Germany<br/>Military - German Army
+[2024-09-29T02:31:32.863+0000] {subprocess.py:93} INFO - </font></td>
+[2024-09-29T02:31:32.863+0000] {subprocess.py:93} INFO - <td align="left" valign="top"><font face="Arial" size="2">Super Zeppelin (airship)<br/>?</font></td>
+[2024-09-29T02:31:32.863+0000] {subprocess.py:93} INFO - <td align="right" valign="top" width="1"><font face="Arial" size="2">27/28(0)</font></td>
+[2024-09-29T02:31:32.863+0000] {subprocess.py:93} INFO - </tr>
+[2024-09-29T02:31:32.863+0000] {subprocess.py:93} INFO - <tr bgcolor="DCDCDC">
+[2024-09-29T02:31:32.863+0000] {subprocess.py:93} INFO - <td align="left" valign="top" width="85"><font face="Arial" size="2"><a href="1920-13.htm">28 Nov 1916</a></font></td>
+[2024-09-29T02:31:32.864+0000] {subprocess.py:93} INFO - <td align="left" valign="top"><font face="Arial" size="2">Off West Hartlepool, England<br/>Military - German Navy
+[2024-09-29T02:31:32.864+0000] {subprocess.py:93} INFO - </font></td>
+[2024-09-29T02:31:32.864+0000] {subprocess.py:93} INFO - <td align="left" valign="top"><font face="Arial" size="2">Zeppelin L-34 (airship)<br/>?</font></td>
+[2024-09-29T02:31:32.864+0000] {subprocess.py:93} INFO - <td align="right" valign="top" width="1"><font face="Arial" size="2">20/20(0)</font></td>
+[2024-09-29T02:31:32.864+0000] {subprocess.py:93} INFO - </tr>
+[2024-09-29T02:31:32.864+0000] {subprocess.py:93} INFO - <tr bgcolor="WHITE">
+[2024-09-29T02:31:32.864+0000] {subprocess.py:93} INFO - <td align="left" valign="top" width="85"><font face="Arial" size="2"><a href="1920-14.htm">04 Mar 1917</a></font></td>
+[2024-09-29T02:31:32.864+0000] {subprocess.py:93} INFO - <td align="left" valign="top"><font face="Arial" size="2">Near Gent, Belgium<br/>Military - German Army
+[2024-09-29T02:31:32.865+0000] {subprocess.py:93} INFO - </font></td>
+[2024-09-29T02:31:32.865+0000] {subprocess.py:93} INFO - <td align="left" valign="top"><font face="Arial" size="2">Airship<br/>?</font></td>
+[2024-09-29T02:31:32.865+0000] {subprocess.py:93} INFO - <td align="right" valign="top" width="1"><font face="Arial" size="2">20/20(0)</font></td>
+[2024-09-29T02:31:32.865+0000] {subprocess.py:93} INFO - </tr>
+[2024-09-29T02:31:32.865+0000] {subprocess.py:93} INFO - <tr bgcolor="DCDCDC">
+[2024-09-29T02:31:32.865+0000] {subprocess.py:93} INFO - <td align="left" valign="top" width="85"><font face="Arial" size="2"><a href="1920-15.htm">30 Mar 1917</a></font></td>
+[2024-09-29T02:31:32.865+0000] {subprocess.py:93} INFO - <td align="left" valign="top"><font face="Arial" size="2">Off Northern Germany<br/>Military - German Navy
+[2024-09-29T02:31:32.865+0000] {subprocess.py:93} INFO - </font></td>
+[2024-09-29T02:31:32.866+0000] {subprocess.py:93} INFO - <td align="left" valign="top"><font face="Arial" size="2">Schutte-Lanz S-L-9 (airship)<br/>?</font></td>
+[2024-09-29T02:31:32.866+0000] {subprocess.py:93} INFO - <td align="right" valign="top" width="1"><font face="Arial" size="2">23/23(0)</font></td>
+[2024-09-29T02:31:32.866+0000] {subprocess.py:93} INFO - </tr>
+[2024-09-29T02:31:32.866+0000] {subprocess.py:93} INFO - <tr bgcolor="WHITE">
+[2024-09-29T02:31:32.866+0000] {subprocess.py:93} INFO - <td align="left" valign="top" width="85"><font face="Arial" size="2"><a href="1920-16.htm">14 May 1917</a></font></td>
+[2024-09-29T02:31:32.866+0000] {subprocess.py:93} INFO - <td align="left" valign="top"><font face="Arial" size="2">Near Texel Island, North Sea<br/>Military - German Navy
+[2024-09-29T02:31:32.866+0000] {subprocess.py:93} INFO - </font></td>
+[2024-09-29T02:31:32.866+0000] {subprocess.py:93} INFO - <td align="left" valign="top"><font face="Arial" size="2">Zeppelin L-22 (airship)<br/>?</font></td>
+[2024-09-29T02:31:32.866+0000] {subprocess.py:93} INFO - <td align="right" valign="top" width="1"><font face="Arial" size="2">21/21(0)</font></td>
+[2024-09-29T02:31:32.867+0000] {subprocess.py:93} INFO - </tr>
+[2024-09-29T02:31:32.867+0000] {subprocess.py:93} INFO - <tr bgcolor="DCDCDC">
+[2024-09-29T02:31:32.867+0000] {subprocess.py:93} INFO - <td align="left" valign="top" width="85"><font face="Arial" size="2"><a href="1920-17.htm">14 Jun 1917</a></font></td>
+[2024-09-29T02:31:32.867+0000] {subprocess.py:93} INFO - <td align="left" valign="top"><font face="Arial" size="2">Off Vlieland Island, North Sea<br/>Military - German Navy
+[2024-09-29T02:31:32.867+0000] {subprocess.py:93} INFO - </font></td>
+[2024-09-29T02:31:32.867+0000] {subprocess.py:93} INFO - <td align="left" valign="top"><font face="Arial" size="2">Zeppelin L-43 (airship)<br/>?</font></td>
+[2024-09-29T02:31:32.867+0000] {subprocess.py:93} INFO - <td align="right" valign="top" width="1"><font face="Arial" size="2">24/24(0)</font></td>
+[2024-09-29T02:31:32.867+0000] {subprocess.py:93} INFO - </tr>
+[2024-09-29T02:31:32.868+0000] {subprocess.py:93} INFO - <tr bgcolor="WHITE">
+[2024-09-29T02:31:32.868+0000] {subprocess.py:93} INFO - <td align="left" valign="top" width="85"><font face="Arial" size="2"><a href="1920-18.htm">17 Jun 1917</a></font></td>
+[2024-09-29T02:31:32.868+0000] {subprocess.py:93} INFO - <td align="left" valign="top"><font face="Arial" size="2">Near Yarmouth, England<br/>?
+[2024-09-29T02:31:32.868+0000] {subprocess.py:93} INFO - </font></td>
+[2024-09-29T02:31:32.868+0000] {subprocess.py:93} INFO - <td align="left" valign="top"><font face="Arial" size="2">Zepplin L-48 (air ship)<br/>L-48</font></td>
+[2024-09-29T02:31:32.868+0000] {subprocess.py:93} INFO - <td align="right" valign="top" width="1"><font face="Arial" size="2">14/16(0)</font></td>
+[2024-09-29T02:31:32.868+0000] {subprocess.py:93} INFO - </tr>
+[2024-09-29T02:31:32.868+0000] {subprocess.py:93} INFO - <tr bgcolor="DCDCDC">
+[2024-09-29T02:31:32.868+0000] {subprocess.py:93} INFO - <td align="left" valign="top" width="85"><font face="Arial" size="2"><a href="1920-19.htm">21 Aug 1917</a></font></td>
+[2024-09-29T02:31:32.869+0000] {subprocess.py:93} INFO - <td align="left" valign="top"><font face="Arial" size="2">Off western Denmark<br/>Military - German Navy
+[2024-09-29T02:31:32.869+0000] {subprocess.py:93} INFO - </font></td>
+[2024-09-29T02:31:32.869+0000] {subprocess.py:93} INFO - <td align="left" valign="top"><font face="Arial" size="2">Zeppelin L-23 (airship)<br/>?</font></td>
+[2024-09-29T02:31:32.869+0000] {subprocess.py:93} INFO - <td align="right" valign="top" width="1"><font face="Arial" size="2">18/18(0)</font></td>
+[2024-09-29T02:31:32.869+0000] {subprocess.py:93} INFO - </tr>
+[2024-09-29T02:31:32.869+0000] {subprocess.py:93} INFO - <tr bgcolor="WHITE">
+[2024-09-29T02:31:32.869+0000] {subprocess.py:93} INFO - <td align="left" valign="top" width="85"><font face="Arial" size="2"><a href="1920-20.htm">20 Oct 1917</a></font></td>
+[2024-09-29T02:31:32.869+0000] {subprocess.py:93} INFO - <td align="left" valign="top"><font face="Arial" size="2">Near Luneville, France<br/>Military - German Navy
+[2024-09-29T02:31:32.869+0000] {subprocess.py:93} INFO - </font></td>
+[2024-09-29T02:31:32.870+0000] {subprocess.py:93} INFO - <td align="left" valign="top"><font face="Arial" size="2">Zeppelin L-44 (airship)<br/>?</font></td>
+[2024-09-29T02:31:32.870+0000] {subprocess.py:93} INFO - <td align="right" valign="top" width="1"><font face="Arial" size="2">18/18(0)</font></td>
+[2024-09-29T02:31:32.870+0000] {subprocess.py:93} INFO - </tr>
+[2024-09-29T02:31:32.870+0000] {subprocess.py:93} INFO - <tr bgcolor="DCDCDC">
+[2024-09-29T02:31:32.870+0000] {subprocess.py:93} INFO - <td align="left" valign="top" width="85"><font face="Arial" size="2"><a href="1920-21.htm">07 Apr 1918</a></font></td>
+[2024-09-29T02:31:32.870+0000] {subprocess.py:93} INFO - <td align="left" valign="top"><font face="Arial" size="2">Over the Mediterranean<br/>Military - German Navy
+[2024-09-29T02:31:32.870+0000] {subprocess.py:93} INFO - </font></td>
+[2024-09-29T02:31:32.870+0000] {subprocess.py:93} INFO - <td align="left" valign="top"><font face="Arial" size="2">Zeppelin L-59 (airship)<br/>?</font></td>
+[2024-09-29T02:31:32.871+0000] {subprocess.py:93} INFO - <td align="right" valign="top" width="1"><font face="Arial" size="2">23/23(0)</font></td>
+[2024-09-29T02:31:32.871+0000] {subprocess.py:93} INFO - </tr>
+[2024-09-29T02:31:32.871+0000] {subprocess.py:93} INFO - <tr bgcolor="WHITE">
+[2024-09-29T02:31:32.871+0000] {subprocess.py:93} INFO - <td align="left" valign="top" width="85"><font face="Arial" size="2"><a href="1920-22.htm">05 Aug 1918</a></font></td>
+[2024-09-29T02:31:32.871+0000] {subprocess.py:93} INFO - <td align="left" valign="top"><font face="Arial" size="2">Off Helgoland Island, Germany<br/>Military - German Navy
+[2024-09-29T02:31:32.871+0000] {subprocess.py:93} INFO - </font></td>
+[2024-09-29T02:31:32.871+0000] {subprocess.py:93} INFO - <td align="left" valign="top"><font face="Arial" size="2">Zeppelin L-70 (airship)<br/>?</font></td>
+[2024-09-29T02:31:32.871+0000] {subprocess.py:93} INFO - <td align="right" valign="top" width="1"><font face="Arial" size="2">22/22(0)</font></td>
+[2024-09-29T02:31:32.872+0000] {subprocess.py:93} INFO - </tr>
+[2024-09-29T02:31:32.872+0000] {subprocess.py:93} INFO - <tr bgcolor="DCDCDC">
+[2024-09-29T02:31:32.872+0000] {subprocess.py:93} INFO - <td align="left" valign="top" width="85"><font face="Arial" size="2"><a href="1920-23.htm">11 Aug 1918</a></font></td>
+[2024-09-29T02:31:32.872+0000] {subprocess.py:93} INFO - <td align="left" valign="top"><font face="Arial" size="2">Ameland Island, North Sea<br/>Military - German Navy
+[2024-09-29T02:31:32.872+0000] {subprocess.py:93} INFO - </font></td>
+[2024-09-29T02:31:32.872+0000] {subprocess.py:93} INFO - <td align="left" valign="top"><font face="Arial" size="2">Zeppelin L-53 (airship)<br/>?</font></td>
+[2024-09-29T02:31:32.872+0000] {subprocess.py:93} INFO - <td align="right" valign="top" width="1"><font face="Arial" size="2">19/19(0)</font></td>
+[2024-09-29T02:31:32.872+0000] {subprocess.py:93} INFO - </tr>
+[2024-09-29T02:31:32.872+0000] {subprocess.py:93} INFO - <tr bgcolor="WHITE">
+[2024-09-29T02:31:32.872+0000] {subprocess.py:93} INFO - <td align="left" valign="top" width="85"><font face="Arial" size="2"><a href="1920-24.htm">16 Dec 1918</a></font></td>
+[2024-09-29T02:31:32.873+0000] {subprocess.py:93} INFO - <td align="left" valign="top"><font face="Arial" size="2">Elizabeth, New Jersey<br/>US Aerial Mail Service
+[2024-09-29T02:31:32.873+0000] {subprocess.py:93} INFO - </font></td>
+[2024-09-29T02:31:32.873+0000] {subprocess.py:93} INFO - <td align="left" valign="top"><font face="Arial" size="2">De Havilland DH-4<br/>97</font></td>
+[2024-09-29T02:31:32.873+0000] {subprocess.py:93} INFO - <td align="right" valign="top" width="1"><font face="Arial" size="2">1/1(0)</font></td>
+[2024-09-29T02:31:32.873+0000] {subprocess.py:93} INFO - </tr>
+[2024-09-29T02:31:32.873+0000] {subprocess.py:93} INFO - <tr bgcolor="DCDCDC">
+[2024-09-29T02:31:32.873+0000] {subprocess.py:93} INFO - <td align="left" valign="top" width="85"><font face="Arial" size="2"><a href="1920-25.htm">25 May 1919</a></font></td>
+[2024-09-29T02:31:32.873+0000] {subprocess.py:93} INFO - <td align="left" valign="top"><font face="Arial" size="2">Cleveland, Ohio<br/>US Aerial Mail Service
+[2024-09-29T02:31:32.874+0000] {subprocess.py:93} INFO - </font></td>
+[2024-09-29T02:31:32.874+0000] {subprocess.py:93} INFO - <td align="left" valign="top"><font face="Arial" size="2">De Havilland DH-4<br/>61</font></td>
+[2024-09-29T02:31:32.874+0000] {subprocess.py:93} INFO - <td align="right" valign="top" width="1"><font face="Arial" size="2">1/1(0)</font></td>
+[2024-09-29T02:31:32.874+0000] {subprocess.py:93} INFO - </tr>
+[2024-09-29T02:31:32.874+0000] {subprocess.py:93} INFO - <tr bgcolor="WHITE">
+[2024-09-29T02:31:32.874+0000] {subprocess.py:93} INFO - <td align="left" valign="top" width="85"><font face="Arial" size="2"><a href="1920-26.htm">19 Jul 1919</a></font></td>
+[2024-09-29T02:31:32.874+0000] {subprocess.py:93} INFO - <td align="left" valign="top"><font face="Arial" size="2">Dix Run, Pennsylvania<br/>US Aerial Mail Service
+[2024-09-29T02:31:32.874+0000] {subprocess.py:93} INFO - </font></td>
+[2024-09-29T02:31:32.875+0000] {subprocess.py:93} INFO - <td align="left" valign="top"><font face="Arial" size="2">De Havilland DH-4<br/>82</font></td>
+[2024-09-29T02:31:32.875+0000] {subprocess.py:93} INFO - <td align="right" valign="top" width="1"><font face="Arial" size="2">1/1(0)</font></td>
+[2024-09-29T02:31:32.875+0000] {subprocess.py:93} INFO - </tr>
+[2024-09-29T02:31:32.875+0000] {subprocess.py:93} INFO - <tr bgcolor="DCDCDC">
+[2024-09-29T02:31:32.876+0000] {subprocess.py:93} INFO - <td align="left" valign="top" width="85"><font face="Arial" size="2"><a href="1920-27.htm">21 Jul 1919</a></font></td>
+[2024-09-29T02:31:32.877+0000] {subprocess.py:93} INFO - <td align="left" valign="top"><font face="Arial" size="2">Chicago, Illinois<br/>Wingfoot Air Express Goodyear Tire
+[2024-09-29T02:31:32.877+0000] {subprocess.py:93} INFO - </font></td>
+[2024-09-29T02:31:32.877+0000] {subprocess.py:93} INFO - <td align="left" valign="top"><font face="Arial" size="2">FD Type Dirigible<br/>?</font></td>
+[2024-09-29T02:31:32.877+0000] {subprocess.py:93} INFO - <td align="right" valign="top" width="1"><font face="Arial" size="2">3/?(10)</font></td>
+[2024-09-29T02:31:32.877+0000] {subprocess.py:93} INFO - </tr>
+[2024-09-29T02:31:32.877+0000] {subprocess.py:93} INFO - <tr bgcolor="WHITE">
+[2024-09-29T02:31:32.878+0000] {subprocess.py:93} INFO - <td align="left" valign="top" width="85"><font face="Arial" size="2"><a href="1920-28.htm">02 Aug 1919</a></font></td>
+[2024-09-29T02:31:32.878+0000] {subprocess.py:93} INFO - <td align="left" valign="top"><font face="Arial" size="2">Verona, Italy<br/>Caproni Company
+[2024-09-29T02:31:32.878+0000] {subprocess.py:93} INFO - </font></td>
+[2024-09-29T02:31:32.878+0000] {subprocess.py:93} INFO - <td align="left" valign="top"><font face="Arial" size="2">Caproni Ca.48<br/>?</font></td>
+[2024-09-29T02:31:32.878+0000] {subprocess.py:93} INFO - <td align="right" valign="top" width="1"><font face="Arial" size="2">14/14(0)</font></td>
+[2024-09-29T02:31:32.878+0000] {subprocess.py:93} INFO - </tr>
+[2024-09-29T02:31:32.878+0000] {subprocess.py:93} INFO - <tr bgcolor="DCDCDC">
+[2024-09-29T02:31:32.878+0000] {subprocess.py:93} INFO - <td align="left" valign="top" width="85"><font face="Arial" size="2"><a href="1920-29.htm">02 Oct 1919</a></font></td>
+[2024-09-29T02:31:32.880+0000] {subprocess.py:93} INFO - <td align="left" valign="top"><font face="Arial" size="2">Newcastle, England<br/>Aircraft Transport and Travel
+[2024-09-29T02:31:32.880+0000] {subprocess.py:93} INFO - </font></td>
+[2024-09-29T02:31:32.880+0000] {subprocess.py:93} INFO - <td align="left" valign="top"><font face="Arial" size="2">De Havilland DH-4<br/>?</font></td>
+[2024-09-29T02:31:32.880+0000] {subprocess.py:93} INFO - <td align="right" valign="top" width="1"><font face="Arial" size="2">1/1(0)</font></td>
+[2024-09-29T02:31:32.880+0000] {subprocess.py:93} INFO - </tr>
+[2024-09-29T02:31:32.880+0000] {subprocess.py:93} INFO - <tr bgcolor="WHITE">
+[2024-09-29T02:31:32.880+0000] {subprocess.py:93} INFO - <td align="left" valign="top" width="85"><font face="Arial" size="2"><a href="1920-30.htm">14 Oct 1919</a></font></td>
+[2024-09-29T02:31:32.881+0000] {subprocess.py:93} INFO - <td align="left" valign="top"><font face="Arial" size="2">Cantonsville, Maryland<br/>US Aerial Mail Service
+[2024-09-29T02:31:32.881+0000] {subprocess.py:93} INFO - </font></td>
+[2024-09-29T02:31:32.881+0000] {subprocess.py:93} INFO - <td align="left" valign="top"><font face="Arial" size="2">Curtiss R-4LM<br/>32</font></td>
+[2024-09-29T02:31:32.881+0000] {subprocess.py:93} INFO - <td align="right" valign="top" width="1"><font face="Arial" size="2">1/1(0)</font></td>
+[2024-09-29T02:31:32.881+0000] {subprocess.py:93} INFO - </tr>
+[2024-09-29T02:31:32.881+0000] {subprocess.py:93} INFO - <tr bgcolor="DCDCDC">
+[2024-09-29T02:31:32.881+0000] {subprocess.py:93} INFO - <td align="left" valign="top" width="85"><font face="Arial" size="2"><a href="1920-31.htm">20 Oct 1919</a></font></td>
+[2024-09-29T02:31:32.881+0000] {subprocess.py:93} INFO - <td align="left" valign="top"><font face="Arial" size="2">English Channel off Forkstone, Kent<br/>Aircraft Transport and Travel
+[2024-09-29T02:31:32.881+0000] {subprocess.py:93} INFO - </font></td>
+[2024-09-29T02:31:32.881+0000] {subprocess.py:93} INFO - <td align="left" valign="top"><font face="Arial" size="2">De Havilland DH-4<br/>G-EAHG</font></td>
+[2024-09-29T02:31:32.882+0000] {subprocess.py:93} INFO - <td align="right" valign="top" width="1"><font face="Arial" size="2">0/0(0)</font></td>
+[2024-09-29T02:31:32.882+0000] {subprocess.py:93} INFO - </tr>
+[2024-09-29T02:31:32.882+0000] {subprocess.py:93} INFO - <tr bgcolor="WHITE">
+[2024-09-29T02:31:32.882+0000] {subprocess.py:93} INFO - <td align="left" valign="top" width="85"><font face="Arial" size="2"><a href="1920-32.htm">30 Oct 1919</a></font></td>
+[2024-09-29T02:31:32.882+0000] {subprocess.py:93} INFO - <td align="left" valign="top"><font face="Arial" size="2">Long Valley, New Jersey<br/>US Aerial Mail Service
+[2024-09-29T02:31:32.882+0000] {subprocess.py:93} INFO - </font></td>
+[2024-09-29T02:31:32.882+0000] {subprocess.py:93} INFO - <td align="left" valign="top"><font face="Arial" size="2">De Havilland DH.4<br/>77</font></td>
+[2024-09-29T02:31:32.882+0000] {subprocess.py:93} INFO - <td align="right" valign="top" width="1"><font face="Arial" size="2">1/1(0)</font></td>
+[2024-09-29T02:31:32.883+0000] {subprocess.py:93} INFO - </tr>
+[2024-09-29T02:31:32.883+0000] {subprocess.py:93} INFO - <tr bgcolor="DCDCDC">
+[2024-09-29T02:31:32.883+0000] {subprocess.py:93} INFO - <td align="left" valign="top" width="85"><font face="Arial" size="2"><a href="1920-33.htm">11 Dec 1919</a></font></td>
+[2024-09-29T02:31:32.883+0000] {subprocess.py:93} INFO - <td align="left" valign="top"><font face="Arial" size="2">Catherham, Surrey, UK<br/>Aircraft Travel Transport
+[2024-09-29T02:31:32.883+0000] {subprocess.py:93} INFO - </font></td>
+[2024-09-29T02:31:32.883+0000] {subprocess.py:93} INFO - <td align="left" valign="top"><font face="Arial" size="2">de Havilland DH-4<br/>G-EAHF</font></td>
+[2024-09-29T02:31:32.883+0000] {subprocess.py:93} INFO - <td align="right" valign="top" width="1"><font face="Arial" size="2">1/1(0)</font></td>
+[2024-09-29T02:31:32.883+0000] {subprocess.py:93} INFO - </tr>
+[2024-09-29T02:31:32.883+0000] {subprocess.py:93} INFO - <tr bgcolor="WHITE">
+[2024-09-29T02:31:32.883+0000] {subprocess.py:93} INFO - <td align="left" valign="top" width="85"><font face="Arial" size="2"><a href="1920-34.htm">10 Mar 1920</a></font></td>
+[2024-09-29T02:31:32.883+0000] {subprocess.py:93} INFO - <td align="left" valign="top"><font face="Arial" size="2">New Paris, Indiana<br/>US Aerial Mail Service
+[2024-09-29T02:31:32.883+0000] {subprocess.py:93} INFO - </font></td>
+[2024-09-29T02:31:32.883+0000] {subprocess.py:93} INFO - <td align="left" valign="top"><font face="Arial" size="2">De Havilland DH-4<br/>65</font></td>
+[2024-09-29T02:31:32.884+0000] {subprocess.py:93} INFO - <td align="right" valign="top" width="1"><font face="Arial" size="2">1/1(0)</font></td>
+[2024-09-29T02:31:32.884+0000] {subprocess.py:93} INFO - </tr>
+[2024-09-29T02:31:32.884+0000] {subprocess.py:93} INFO - <tr bgcolor="DCDCDC">
+[2024-09-29T02:31:32.884+0000] {subprocess.py:93} INFO - <td align="left" valign="top" width="85"><font face="Arial" size="2"><a href="1920-35.htm">30 Mar 1920</a></font></td>
+[2024-09-29T02:31:32.884+0000] {subprocess.py:93} INFO - <td align="left" valign="top"><font face="Arial" size="2">Newark, New Jersey<br/>US Aerial Mail Service
+[2024-09-29T02:31:32.884+0000] {subprocess.py:93} INFO - </font></td>
+[2024-09-29T02:31:32.884+0000] {subprocess.py:93} INFO - <td align="left" valign="top"><font face="Arial" size="2">De Havilland DH-4<br/>72</font></td>
+[2024-09-29T02:31:32.884+0000] {subprocess.py:93} INFO - <td align="right" valign="top" width="1"><font face="Arial" size="2">1/1(0)</font></td>
+[2024-09-29T02:31:32.884+0000] {subprocess.py:93} INFO - </tr>
+[2024-09-29T02:31:32.884+0000] {subprocess.py:93} INFO - <tr bgcolor="WHITE">
+[2024-09-29T02:31:32.884+0000] {subprocess.py:93} INFO - <td align="left" valign="top" width="85"><font face="Arial" size="2"><a href="1920-36.htm">10 Apr 1920</a></font></td>
+[2024-09-29T02:31:32.884+0000] {subprocess.py:93} INFO - <td align="left" valign="top"><font face="Arial" size="2">Newark, New Jersey<br/>US Aerial Mail Service
+[2024-09-29T02:31:32.885+0000] {subprocess.py:93} INFO - </font></td>
+[2024-09-29T02:31:32.885+0000] {subprocess.py:93} INFO - <td align="left" valign="top"><font face="Arial" size="2">Curtiss R-4LM<br/>49</font></td>
+[2024-09-29T02:31:32.885+0000] {subprocess.py:93} INFO - <td align="right" valign="top" width="1"><font face="Arial" size="2">1/2(0)</font></td>
+[2024-09-29T02:31:32.885+0000] {subprocess.py:93} INFO - </tr>
+[2024-09-29T02:31:32.885+0000] {subprocess.py:93} INFO - <tr bgcolor="DCDCDC">
+[2024-09-29T02:31:32.885+0000] {subprocess.py:93} INFO - <td align="left" valign="top" width="85"><font face="Arial" size="2"><a href="1920-37.htm">11 Apr 1920</a></font></td>
+[2024-09-29T02:31:32.885+0000] {subprocess.py:93} INFO - <td align="left" valign="top"><font face="Arial" size="2">Heller Field, New Jersey<br/>US Aerial Mail Service
+[2024-09-29T02:31:32.885+0000] {subprocess.py:93} INFO - </font></td>
+[2024-09-29T02:31:32.885+0000] {subprocess.py:93} INFO - <td align="left" valign="top"><font face="Arial" size="2">Curtiss JN-4H<br/>44</font></td>
+[2024-09-29T02:31:32.885+0000] {subprocess.py:93} INFO - <td align="right" valign="top" width="1"><font face="Arial" size="2">1/2(0)</font></td>
+[2024-09-29T02:31:32.885+0000] {subprocess.py:93} INFO - </tr>
+[2024-09-29T02:31:32.886+0000] {subprocess.py:93} INFO - <tr bgcolor="WHITE">
+[2024-09-29T02:31:32.886+0000] {subprocess.py:93} INFO - <td align="left" valign="top" width="85"><font face="Arial" size="2"><a href="1920-38.htm">12 May 1920</a></font></td>
+[2024-09-29T02:31:32.886+0000] {subprocess.py:93} INFO - <td align="left" valign="top"><font face="Arial" size="2">Oskaloosa, Iowa<br/>US Aerial Mail Service
+[2024-09-29T02:31:32.886+0000] {subprocess.py:93} INFO - </font></td>
+[2024-09-29T02:31:32.886+0000] {subprocess.py:93} INFO - <td align="left" valign="top"><font face="Arial" size="2">De Havilland DH-4<br/>79</font></td>
+[2024-09-29T02:31:32.886+0000] {subprocess.py:93} INFO - <td align="right" valign="top" width="1"><font face="Arial" size="2">1/2(0)</font></td>
+[2024-09-29T02:31:32.886+0000] {subprocess.py:93} INFO - </tr>
+[2024-09-29T02:31:32.886+0000] {subprocess.py:93} INFO - <tr bgcolor="DCDCDC">
+[2024-09-29T02:31:32.886+0000] {subprocess.py:93} INFO - <td align="left" valign="top" width="85"><font face="Arial" size="2"><a href="1920-39.htm">06 Jun 1920</a></font></td>
+[2024-09-29T02:31:32.886+0000] {subprocess.py:93} INFO - <td align="left" valign="top"><font face="Arial" size="2">Cleveland, Ohio<br/>US Aerial Mail Service
+[2024-09-29T02:31:32.886+0000] {subprocess.py:93} INFO - </font></td>
+[2024-09-29T02:31:32.886+0000] {subprocess.py:93} INFO - <td align="left" valign="top"><font face="Arial" size="2">De Havilland DH-4<br/>204</font></td>
+[2024-09-29T02:31:32.887+0000] {subprocess.py:93} INFO - <td align="right" valign="top" width="1"><font face="Arial" size="2">1/1(0)</font></td>
+[2024-09-29T02:31:32.887+0000] {subprocess.py:93} INFO - </tr>
+[2024-09-29T02:31:32.887+0000] {subprocess.py:93} INFO - <tr bgcolor="WHITE">
+[2024-09-29T02:31:32.887+0000] {subprocess.py:93} INFO - <td align="left" valign="top" width="85"><font face="Arial" size="2"><a href="1920-40.htm">20 Jul 1920</a></font></td>
+[2024-09-29T02:31:32.887+0000] {subprocess.py:93} INFO - <td align="left" valign="top"><font face="Arial" size="2">Cartagena, Columbia<br/>Compañia Colombiana de Navegación Aérea
+[2024-09-29T02:31:32.887+0000] {subprocess.py:93} INFO - </font></td>
+[2024-09-29T02:31:32.887+0000] {subprocess.py:93} INFO - <td align="left" valign="top"><font face="Arial" size="2">Farman F-40<br/>?</font></td>
+[2024-09-29T02:31:32.887+0000] {subprocess.py:93} INFO - <td align="right" valign="top" width="1"><font face="Arial" size="2">1/1(0)</font></td>
+[2024-09-29T02:31:32.887+0000] {subprocess.py:93} INFO - </tr>
+[2024-09-29T02:31:32.887+0000] {subprocess.py:93} INFO - <tr bgcolor="DCDCDC">
+[2024-09-29T02:31:32.887+0000] {subprocess.py:93} INFO - <td align="left" valign="top" width="85"><font face="Arial" size="2"><a href="1920-41.htm">16 Aug 1920</a></font></td>
+[2024-09-29T02:31:32.888+0000] {subprocess.py:93} INFO - <td align="left" valign="top"><font face="Arial" size="2">Bedford, England<br/>By Air
+[2024-09-29T02:31:32.888+0000] {subprocess.py:93} INFO - </font></td>
+[2024-09-29T02:31:32.888+0000] {subprocess.py:93} INFO - <td align="left" valign="top"><font face="Arial" size="2">Armstrong-Whitworth F-K-8<br/>G-EALW</font></td>
+[2024-09-29T02:31:32.888+0000] {subprocess.py:93} INFO - <td align="right" valign="top" width="1"><font face="Arial" size="2">1/1(0)</font></td>
+[2024-09-29T02:31:32.888+0000] {subprocess.py:93} INFO - </tr>
+[2024-09-29T02:31:32.888+0000] {subprocess.py:93} INFO - <tr bgcolor="WHITE">
+[2024-09-29T02:31:32.888+0000] {subprocess.py:93} INFO - <td align="left" valign="top" width="85"><font face="Arial" size="2"><a href="1920-42.htm">16 Aug 1920</a></font></td>
+[2024-09-29T02:31:32.888+0000] {subprocess.py:93} INFO - <td align="left" valign="top"><font face="Arial" size="2">College Park, Maryland<br/>US Aerial Mail Service
+[2024-09-29T02:31:32.888+0000] {subprocess.py:93} INFO - </font></td>
+[2024-09-29T02:31:32.888+0000] {subprocess.py:93} INFO - <td align="left" valign="top"><font face="Arial" size="2">De Havilland DH-4<br/>317</font></td>
+[2024-09-29T02:31:32.888+0000] {subprocess.py:93} INFO - <td align="right" valign="top" width="1"><font face="Arial" size="2">1/1(0)</font></td>
+[2024-09-29T02:31:32.888+0000] {subprocess.py:93} INFO - </tr>
+[2024-09-29T02:31:32.889+0000] {subprocess.py:93} INFO - <tr bgcolor="DCDCDC">
+[2024-09-29T02:31:32.889+0000] {subprocess.py:93} INFO - <td align="left" valign="top" width="85"><font face="Arial" size="2"><a href="1920-43.htm">01 Sep 1920</a></font></td>
+[2024-09-29T02:31:32.889+0000] {subprocess.py:93} INFO - <td align="left" valign="top"><font face="Arial" size="2">Morristown, New Jersey<br/>US Aerial Mail Service
+[2024-09-29T02:31:32.889+0000] {subprocess.py:93} INFO - </font></td>
+[2024-09-29T02:31:32.889+0000] {subprocess.py:93} INFO - <td align="left" valign="top"><font face="Arial" size="2">Junkers JL-6<br/>305</font></td>
+[2024-09-29T02:31:32.889+0000] {subprocess.py:93} INFO - <td align="right" valign="top" width="1"><font face="Arial" size="2">2/2(0)</font></td>
+[2024-09-29T02:31:32.889+0000] {subprocess.py:93} INFO - </tr>
+[2024-09-29T02:31:32.889+0000] {subprocess.py:93} INFO - <tr bgcolor="WHITE">
+[2024-09-29T02:31:32.889+0000] {subprocess.py:93} INFO - <td align="left" valign="top" width="85"><font face="Arial" size="2"><a href="1920-44.htm">15 Sep 1920</a></font></td>
+[2024-09-29T02:31:32.889+0000] {subprocess.py:93} INFO - <td align="left" valign="top"><font face="Arial" size="2">Pemberville, Ohio<br/>US Aerial Mail Service
+[2024-09-29T02:31:32.889+0000] {subprocess.py:93} INFO - </font></td>
+[2024-09-29T02:31:32.890+0000] {subprocess.py:93} INFO - <td align="left" valign="top"><font face="Arial" size="2">Junkers F-13<br/>308</font></td>
+[2024-09-29T02:31:32.890+0000] {subprocess.py:93} INFO - <td align="right" valign="top" width="1"><font face="Arial" size="2">2/2(0)</font></td>
+[2024-09-29T02:31:32.890+0000] {subprocess.py:93} INFO - </tr>
+[2024-09-29T02:31:32.890+0000] {subprocess.py:93} INFO - <tr bgcolor="DCDCDC">
+[2024-09-29T02:31:32.890+0000] {subprocess.py:93} INFO - <td align="left" valign="top" width="85"><font face="Arial" size="2"><a href="1920-45.htm">27 Sep 1920</a></font></td>
+[2024-09-29T02:31:32.890+0000] {subprocess.py:93} INFO - <td align="left" valign="top"><font face="Arial" size="2">Hillersburg, Pennsylvania<br/>US Aerial Mail Service
+[2024-09-29T02:31:32.890+0000] {subprocess.py:93} INFO - </font></td>
+[2024-09-29T02:31:32.890+0000] {subprocess.py:93} INFO - <td align="left" valign="top"><font face="Arial" size="2">De Havilland DH-4<br/>316</font></td>
+[2024-09-29T02:31:32.890+0000] {subprocess.py:93} INFO - <td align="right" valign="top" width="1"><font face="Arial" size="2">1/1(0)</font></td>
+[2024-09-29T02:31:32.891+0000] {subprocess.py:93} INFO - </tr>
+[2024-09-29T02:31:32.891+0000] {subprocess.py:93} INFO - <tr bgcolor="WHITE">
+[2024-09-29T02:31:32.891+0000] {subprocess.py:93} INFO - <td align="left" valign="top" width="85"><font face="Arial" size="2"><a href="1920-46.htm">02 Oct 1920</a></font></td>
+[2024-09-29T02:31:32.891+0000] {subprocess.py:93} INFO - <td align="left" valign="top"><font face="Arial" size="2">Off Port Vendres, France<br/>Latecoere Airlines
+[2024-09-29T02:31:32.891+0000] {subprocess.py:93} INFO - </font></td>
+[2024-09-29T02:31:32.891+0000] {subprocess.py:93} INFO - <td align="left" valign="top"><font face="Arial" size="2">Salmson 2-A-2<br/>F-ALAI</font></td>
+[2024-09-29T02:31:32.891+0000] {subprocess.py:93} INFO - <td align="right" valign="top" width="1"><font face="Arial" size="2">2/2(0)</font></td>
+[2024-09-29T02:31:32.891+0000] {subprocess.py:93} INFO - </tr>
+[2024-09-29T02:31:32.891+0000] {subprocess.py:93} INFO - <tr bgcolor="DCDCDC">
+[2024-09-29T02:31:32.892+0000] {subprocess.py:93} INFO - <td align="left" valign="top" width="85"><font face="Arial" size="2"><a href="1920-47.htm">05 Oct 1920</a></font></td>
+[2024-09-29T02:31:32.892+0000] {subprocess.py:93} INFO - <td align="left" valign="top"><font face="Arial" size="2">Valencia, Spain<br/>Latecoere Airlines
+[2024-09-29T02:31:32.892+0000] {subprocess.py:93} INFO - </font></td>
+[2024-09-29T02:31:32.892+0000] {subprocess.py:93} INFO - <td align="left" valign="top"><font face="Arial" size="2">Breguet 14<br/>F-ALTA</font></td>
+[2024-09-29T02:31:32.892+0000] {subprocess.py:93} INFO - <td align="right" valign="top" width="1"><font face="Arial" size="2">2/2(0)</font></td>
+[2024-09-29T02:31:32.892+0000] {subprocess.py:93} INFO - </tr>
+[2024-09-29T02:31:32.892+0000] {subprocess.py:93} INFO - <tr bgcolor="WHITE">
+[2024-09-29T02:31:32.892+0000] {subprocess.py:93} INFO - <td align="left" valign="top" width="85"><font face="Arial" size="2"><a href="1920-48.htm">15 Oct 1920</a></font></td>
+[2024-09-29T02:31:32.892+0000] {subprocess.py:93} INFO - <td align="left" valign="top"><font face="Arial" size="2">Batavia, Illinois<br/>US Aerial Mail Service
+[2024-09-29T02:31:32.892+0000] {subprocess.py:93} INFO - </font></td>
+[2024-09-29T02:31:32.892+0000] {subprocess.py:93} INFO - <td align="left" valign="top"><font face="Arial" size="2">De Havilland DH-4<br/>76</font></td>
+[2024-09-29T02:31:32.893+0000] {subprocess.py:93} INFO - <td align="right" valign="top" width="1"><font face="Arial" size="2">1/1(0)</font></td>
+[2024-09-29T02:31:32.893+0000] {subprocess.py:93} INFO - </tr>
+[2024-09-29T02:31:32.893+0000] {subprocess.py:93} INFO - <tr bgcolor="DCDCDC">
+[2024-09-29T02:31:32.893+0000] {subprocess.py:93} INFO - <td align="left" valign="top" width="85"><font face="Arial" size="2"><a href="1920-49.htm">07 Nov 1920</a></font></td>
+[2024-09-29T02:31:32.893+0000] {subprocess.py:93} INFO - <td align="left" valign="top"><font face="Arial" size="2">Tie Siding, Wyoming<br/>US Aerial Mail Service
+[2024-09-29T02:31:32.893+0000] {subprocess.py:93} INFO - </font></td>
+[2024-09-29T02:31:32.893+0000] {subprocess.py:93} INFO - <td align="left" valign="top"><font face="Arial" size="2">De Havilland DH-4<br/>?</font></td>
+[2024-09-29T02:31:32.893+0000] {subprocess.py:93} INFO - <td align="right" valign="top" width="1"><font face="Arial" size="2">1/1(0)</font></td>
+[2024-09-29T02:31:32.893+0000] {subprocess.py:93} INFO - </tr>
+[2024-09-29T02:31:32.893+0000] {subprocess.py:93} INFO - <tr bgcolor="WHITE">
+[2024-09-29T02:31:32.893+0000] {subprocess.py:93} INFO - <td align="left" valign="top" width="85"><font face="Arial" size="2"><a href="1920-50.htm">14 Dec 1920</a></font></td>
+[2024-09-29T02:31:32.894+0000] {subprocess.py:93} INFO - <td align="left" valign="top"><font face="Arial" size="2">London, England<br/>Handley Page Transport
+[2024-09-29T02:31:32.894+0000] {subprocess.py:93} INFO - </font></td>
+[2024-09-29T02:31:32.894+0000] {subprocess.py:93} INFO - <td align="left" valign="top"><font face="Arial" size="2">Handley Page HP-16<br/>G-EAMA</font></td>
+[2024-09-29T02:31:32.894+0000] {subprocess.py:93} INFO - <td align="right" valign="top" width="1"><font face="Arial" size="2">4/8(0)</font></td>
+[2024-09-29T02:31:32.894+0000] {subprocess.py:93} INFO - </tr>
+[2024-09-29T02:31:32.894+0000] {subprocess.py:93} INFO - <tr bgcolor="DCDCDC">
+[2024-09-29T02:31:32.894+0000] {subprocess.py:93} INFO - <td align="left" valign="top" width="85"><font face="Arial" size="2"><a href="1920-51.htm">24 Dec 1920</a></font></td>
+[2024-09-29T02:31:32.894+0000] {subprocess.py:93} INFO - <td align="left" valign="top"><font face="Arial" size="2">Barcelona, Spain<br/>Aeropostale
+[2024-09-29T02:31:32.894+0000] {subprocess.py:93} INFO - </font></td>
+[2024-09-29T02:31:32.894+0000] {subprocess.py:93} INFO - <td align="left" valign="top"><font face="Arial" size="2">Breguet 14<br/>F-ALBO</font></td>
+[2024-09-29T02:31:32.895+0000] {subprocess.py:93} INFO - <td align="right" valign="top" width="1"><font face="Arial" size="2">1/1(0)</font></td>
+[2024-09-29T02:31:32.895+0000] {subprocess.py:93} INFO - </tr>
+[2024-09-29T02:31:32.895+0000] {subprocess.py:93} INFO - </table>
+[2024-09-29T02:31:32.895+0000] {subprocess.py:93} INFO - </center>
+[2024-09-29T02:31:32.895+0000] {subprocess.py:93} INFO - </div>
+[2024-09-29T02:31:32.896+0000] {subprocess.py:93} INFO - <blockquote>
+[2024-09-29T02:31:32.896+0000] {subprocess.py:93} INFO - <br/>
+[2024-09-29T02:31:32.896+0000] {subprocess.py:93} INFO - <font face="Arial" size="2">
+[2024-09-29T02:31:32.896+0000] {subprocess.py:93} INFO - <a href="http://www.planecrashinfo.com/index.html">Return to Home Page</a>
+[2024-09-29T02:31:32.896+0000] {subprocess.py:93} INFO - </font></blockquote>
+[2024-09-29T02:31:32.896+0000] {subprocess.py:93} INFO - <blockquote>
+[2024-09-29T02:31:32.897+0000] {subprocess.py:93} INFO - <p><font face="Arial" size="1">Copyright © Richard Kebabjian / www.planecrashinfo.com
+[2024-09-29T02:31:32.897+0000] {subprocess.py:93} INFO - </font></p></blockquote>
+[2024-09-29T02:31:32.897+0000] {subprocess.py:93} INFO - </body>
+[2024-09-29T02:31:32.897+0000] {subprocess.py:93} INFO - <script>'undefined'=== typeof _trfq || (window._trfq = []);'undefined'=== typeof _trfd && (window._trfd=[]),_trfd.push({'tccl.baseHost':'secureserver.net'},{'ap':'cpsh-oh'},{'server':'p3plzcpnl505503'},{'dcenter':'p3'},{'cp_id':'7025743'},{'cp_cache':''},{'cp_cl':'8'}) // Monitoring performance to make your website faster. If you want to opt-out, please contact web hosting support.</script><script src="https://img1.wsimg.com/traffic-assets/js/tccl.min.js"></script></html>
+[2024-09-29T02:32:49.581+0000] {subprocess.py:93} INFO - </html>
+[2024-09-29T02:32:49.581+0000] {subprocess.py:93} INFO - <html>
+[2024-09-29T02:32:49.582+0000] {subprocess.py:93} INFO - <head>
+[2024-09-29T02:32:49.582+0000] {subprocess.py:93} INFO - <meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+[2024-09-29T02:32:49.582+0000] {subprocess.py:93} INFO - <meta content="Microsoft FrontPage 4.0" name="GENERATOR"/>
+[2024-09-29T02:32:49.582+0000] {subprocess.py:93} INFO - <meta content="Aviation accidents" name="description"/>
+[2024-09-29T02:32:49.582+0000] {subprocess.py:93} INFO - <meta content="aircraft accident, plane crash, aviation disaster, safety, aviation safety, aviation accident, airplane crashes, aviation, disasters, accidents, accident, airplane, aircraft, plane, statistics, airline statistics, airline, airlines, hijack, pilot, probable cause, crash, boeing, cockpit, planecrashinfo.com, airbus, famous, fatal, risk, injury, death, flight" name="keywords"/>
+[2024-09-29T02:32:49.582+0000] {subprocess.py:93} INFO - <meta content="FrontPage.Editor.Document" name="ProgId"/>
+[2024-09-29T02:32:49.583+0000] {subprocess.py:93} INFO - <meta content="Aviations accidents 1921" name="Title"/>
+[2024-09-29T02:32:49.583+0000] {subprocess.py:93} INFO - <title>1921</title>
+[2024-09-29T02:32:49.583+0000] {subprocess.py:93} INFO - </head>
+[2024-09-29T02:32:49.583+0000] {subprocess.py:93} INFO - <body>
+[2024-09-29T02:32:49.583+0000] {subprocess.py:93} INFO - <p align="center"><b><font color="#B0B6FF" face="Arial" size="5">1921</font></b></p>
+[2024-09-29T02:32:49.583+0000] {subprocess.py:93} INFO - <div align="center">
+[2024-09-29T02:32:49.583+0000] {subprocess.py:93} INFO - <center>
+[2024-09-29T02:32:49.584+0000] {subprocess.py:93} INFO - <table border="1" cellpadding="4" cellspacing="0" width="700">
+[2024-09-29T02:32:49.584+0000] {subprocess.py:93} INFO - <tr>
+[2024-09-29T02:32:49.584+0000] {subprocess.py:93} INFO - <td align="left" bgcolor="#B0B6FF" width="75"><b><font face="Arial" size="2">Date</font></b></td>
+[2024-09-29T02:32:49.584+0000] {subprocess.py:93} INFO - <td align="left" bgcolor="#B0B6FF"><font face="Arial" size="2"><b>Location / Operator</b></font></td>
+[2024-09-29T02:32:49.584+0000] {subprocess.py:93} INFO - <td align="left" bgcolor="#B0B6FF"><font face="Arial" size="2"><b>Aircraft Type / Registration</b></font></td>
+[2024-09-29T02:32:49.584+0000] {subprocess.py:93} INFO - <td align="right" bgcolor="#B0B6FF"><font face="Arial" size="2"><b>Fatalities</b></font></td>
+[2024-09-29T02:32:49.585+0000] {subprocess.py:93} INFO - </tr>
+[2024-09-29T02:32:49.585+0000] {subprocess.py:93} INFO - <tr bgcolor="DCDCDC">
+[2024-09-29T02:32:49.585+0000] {subprocess.py:93} INFO - <td align="left" valign="top" width="85"><font face="Arial" size="2"><a href="1921-1.htm">03 Feb 1921</a></font></td>
+[2024-09-29T02:32:49.585+0000] {subprocess.py:93} INFO - <td align="left" valign="top"><font face="Arial" size="2">Mendotta, Minnisota<br/>US Aerial Mail Service
+[2024-09-29T02:32:49.585+0000] {subprocess.py:93} INFO - </font></td>
+[2024-09-29T02:32:49.585+0000] {subprocess.py:93} INFO - <td align="left" valign="top"><font face="Arial" size="2">De Havilland DH-4<br/>130</font></td>
+[2024-09-29T02:32:49.585+0000] {subprocess.py:93} INFO - <td align="right" valign="top" width="1"><font face="Arial" size="2">1/1(0)</font></td>
+[2024-09-29T02:32:49.585+0000] {subprocess.py:93} INFO - </tr>
+[2024-09-29T02:32:49.585+0000] {subprocess.py:93} INFO - <tr bgcolor="WHITE">
+[2024-09-29T02:32:49.585+0000] {subprocess.py:93} INFO - <td align="left" valign="top" width="85"><font face="Arial" size="2"><a href="1921-2.htm">09 Feb 1921</a></font></td>
+[2024-09-29T02:32:49.586+0000] {subprocess.py:93} INFO - <td align="left" valign="top"><font face="Arial" size="2">La Crosse, Wisconsin<br/>US Aerial Mail Service
+[2024-09-29T02:32:49.586+0000] {subprocess.py:93} INFO - </font></td>
+[2024-09-29T02:32:49.586+0000] {subprocess.py:93} INFO - <td align="left" valign="top"><font face="Arial" size="2">Junkers F-13<br/>301</font></td>
+[2024-09-29T02:32:49.586+0000] {subprocess.py:93} INFO - <td align="right" valign="top" width="1"><font face="Arial" size="2">3/3(0)</font></td>
+[2024-09-29T02:32:49.586+0000] {subprocess.py:93} INFO - </tr>
+[2024-09-29T02:32:49.586+0000] {subprocess.py:93} INFO - <tr bgcolor="DCDCDC">
+[2024-09-29T02:32:49.586+0000] {subprocess.py:93} INFO - <td align="left" valign="top" width="85"><font face="Arial" size="2"><a href="1921-3.htm">15 Feb 1921</a></font></td>
+[2024-09-29T02:32:49.586+0000] {subprocess.py:93} INFO - <td align="left" valign="top"><font face="Arial" size="2">Off Gibraltar<br/>Aeropostale
+[2024-09-29T02:32:49.586+0000] {subprocess.py:93} INFO - </font></td>
+[2024-09-29T02:32:49.587+0000] {subprocess.py:93} INFO - <td align="left" valign="top"><font face="Arial" size="2">Breguet 14<br/>F-ALBA</font></td>
+[2024-09-29T02:32:49.587+0000] {subprocess.py:93} INFO - <td align="right" valign="top" width="1"><font face="Arial" size="2">2/2(0)</font></td>
+[2024-09-29T02:32:49.587+0000] {subprocess.py:93} INFO - </tr>
+[2024-09-29T02:32:49.587+0000] {subprocess.py:93} INFO - <tr bgcolor="WHITE">
+[2024-09-29T02:32:49.587+0000] {subprocess.py:93} INFO - <td align="left" valign="top" width="85"><font face="Arial" size="2"><a href="1921-4.htm">22 Feb 1921</a></font></td>
+[2024-09-29T02:32:49.587+0000] {subprocess.py:93} INFO - <td align="left" valign="top"><font face="Arial" size="2">Elko, Nevada<br/>US Aerial Mail Service
+[2024-09-29T02:32:49.587+0000] {subprocess.py:93} INFO - </font></td>
+[2024-09-29T02:32:49.588+0000] {subprocess.py:93} INFO - <td align="left" valign="top"><font face="Arial" size="2">De Havilland DH-4<br/>67</font></td>
+[2024-09-29T02:32:49.588+0000] {subprocess.py:93} INFO - <td align="right" valign="top" width="1"><font face="Arial" size="2">1/1(0)</font></td>
+[2024-09-29T02:32:49.588+0000] {subprocess.py:93} INFO - </tr>
+[2024-09-29T02:32:49.588+0000] {subprocess.py:93} INFO - <tr bgcolor="DCDCDC">
+[2024-09-29T02:32:49.588+0000] {subprocess.py:93} INFO - <td align="left" valign="top" width="85"><font face="Arial" size="2"><a href="1921-5.htm">06 Apr 1921</a></font></td>
+[2024-09-29T02:32:49.588+0000] {subprocess.py:93} INFO - <td align="left" valign="top"><font face="Arial" size="2">Point Cook, Australia<br/>Military - Royal Australian Air Force
+[2024-09-29T02:32:49.588+0000] {subprocess.py:93} INFO - </font></td>
+[2024-09-29T02:32:49.589+0000] {subprocess.py:93} INFO - <td align="left" valign="top"><font face="Arial" size="2">
+[2024-09-29T02:32:49.589+0000] {subprocess.py:93} INFO - Avro 504<br/>H3021</font></td>
+[2024-09-29T02:32:49.589+0000] {subprocess.py:93} INFO - <td align="right" valign="top" width="1"><font face="Arial" size="2">2/2(0)</font></td>
+[2024-09-29T02:32:49.589+0000] {subprocess.py:93} INFO - </tr>
+[2024-09-29T02:32:49.589+0000] {subprocess.py:93} INFO - <tr bgcolor="WHITE">
+[2024-09-29T02:32:49.589+0000] {subprocess.py:93} INFO - <td align="left" valign="top" width="85"><font face="Arial" size="2"><a href="1921-6.htm">21 Apr 1921</a></font></td>
+[2024-09-29T02:32:49.589+0000] {subprocess.py:93} INFO - <td align="left" valign="top"><font face="Arial" size="2">Mitchel Field, NY<br/>US Aerial Mail Service
+[2024-09-29T02:32:49.590+0000] {subprocess.py:93} INFO - </font></td>
+[2024-09-29T02:32:49.590+0000] {subprocess.py:93} INFO - <td align="left" valign="top"><font face="Arial" size="2">De Havilland DH-4<br/>160</font></td>
+[2024-09-29T02:32:49.590+0000] {subprocess.py:93} INFO - <td align="right" valign="top" width="1"><font face="Arial" size="2">1/1(0)</font></td>
+[2024-09-29T02:32:49.590+0000] {subprocess.py:93} INFO - </tr>
+[2024-09-29T02:32:49.590+0000] {subprocess.py:93} INFO - <tr bgcolor="DCDCDC">
+[2024-09-29T02:32:49.590+0000] {subprocess.py:93} INFO - <td align="left" valign="top" width="85"><font face="Arial" size="2"><a href="1921-7.htm">29 Apr 1921</a></font></td>
+[2024-09-29T02:32:49.590+0000] {subprocess.py:93} INFO - <td align="left" valign="top"><font face="Arial" size="2">Cleveland, Ohio<br/>US Aerial Mail Service
+[2024-09-29T02:32:49.590+0000] {subprocess.py:93} INFO - </font></td>
+[2024-09-29T02:32:49.590+0000] {subprocess.py:93} INFO - <td align="left" valign="top"><font face="Arial" size="2">De Havilland DH-4<br/>196</font></td>
+[2024-09-29T02:32:49.590+0000] {subprocess.py:93} INFO - <td align="right" valign="top" width="1"><font face="Arial" size="2">1/1(0)</font></td>
+[2024-09-29T02:32:49.590+0000] {subprocess.py:93} INFO - </tr>
+[2024-09-29T02:32:49.591+0000] {subprocess.py:93} INFO - <tr bgcolor="WHITE">
+[2024-09-29T02:32:49.591+0000] {subprocess.py:93} INFO - <td align="left" valign="top" width="85"><font face="Arial" size="2"><a href="1921-8.htm">17 May 1921</a></font></td>
+[2024-09-29T02:32:49.591+0000] {subprocess.py:93} INFO - <td align="left" valign="top"><font face="Arial" size="2">Rock Springs, Wyoming<br/>US Aerial Mail Service
+[2024-09-29T02:32:49.591+0000] {subprocess.py:93} INFO - </font></td>
+[2024-09-29T02:32:49.591+0000] {subprocess.py:93} INFO - <td align="left" valign="top"><font face="Arial" size="2">De Havilland DH-4
+[2024-09-29T02:32:49.591+0000] {subprocess.py:93} INFO - De Havilland DH-4<br/>176</font></td>
+[2024-09-29T02:32:49.591+0000] {subprocess.py:93} INFO - <td align="right" valign="top" width="1"><font face="Arial" size="2">1/1(0)</font></td>
+[2024-09-29T02:32:49.591+0000] {subprocess.py:93} INFO - </tr>
+[2024-09-29T02:32:49.591+0000] {subprocess.py:93} INFO - <tr bgcolor="DCDCDC">
+[2024-09-29T02:32:49.591+0000] {subprocess.py:93} INFO - <td align="left" valign="top" width="85"><font face="Arial" size="2"><a href="1921-9.htm">14 Aug 1921</a></font></td>
+[2024-09-29T02:32:49.591+0000] {subprocess.py:93} INFO - <td align="left" valign="top"><font face="Arial" size="2">Toulouse, France<br/>Aeropostale
+[2024-09-29T02:32:49.591+0000] {subprocess.py:93} INFO - </font></td>
+[2024-09-29T02:32:49.591+0000] {subprocess.py:93} INFO - <td align="left" valign="top"><font face="Arial" size="2">Breguet 14<br/>F-ALBI</font></td>
+[2024-09-29T02:32:49.591+0000] {subprocess.py:93} INFO - <td align="right" valign="top" width="1"><font face="Arial" size="2">2/2(0)</font></td>
+[2024-09-29T02:32:49.592+0000] {subprocess.py:93} INFO - </tr>
+[2024-09-29T02:32:49.592+0000] {subprocess.py:93} INFO - <tr bgcolor="WHITE">
+[2024-09-29T02:32:49.592+0000] {subprocess.py:93} INFO - <td align="left" valign="top" width="85"><font face="Arial" size="2"><a href="1921-10.htm">24 Aug 1921</a></font></td>
+[2024-09-29T02:32:49.592+0000] {subprocess.py:93} INFO - <td align="left" valign="top"><font face="Arial" size="2">River Humber, England<br/>Military - Royal Airship Works
+[2024-09-29T02:32:49.592+0000] {subprocess.py:93} INFO - </font></td>
+[2024-09-29T02:32:49.592+0000] {subprocess.py:93} INFO - <td align="left" valign="top"><font face="Arial" size="2">Royal Airship Works ZR-2 (airship)<br/>R-38</font></td>
+[2024-09-29T02:32:49.592+0000] {subprocess.py:93} INFO - <td align="right" valign="top" width="1"><font face="Arial" size="2">43/49(1)</font></td>
+[2024-09-29T02:32:49.592+0000] {subprocess.py:93} INFO - </tr>
+[2024-09-29T02:32:49.593+0000] {subprocess.py:93} INFO - <tr bgcolor="DCDCDC">
+[2024-09-29T02:32:49.593+0000] {subprocess.py:93} INFO - <td align="left" valign="top" width="85"><font face="Arial" size="2"><a href="1921-11.htm">06 Sep 1921</a></font></td>
+[2024-09-29T02:32:49.593+0000] {subprocess.py:93} INFO - <td align="left" valign="top"><font face="Arial" size="2">Paris, France<br/>Franco-Roumaine
+[2024-09-29T02:32:49.593+0000] {subprocess.py:93} INFO - </font></td>
+[2024-09-29T02:32:49.594+0000] {subprocess.py:93} INFO - <td align="left" valign="top"><font face="Arial" size="2">Potez IX<br/>F-ADCD</font></td>
+[2024-09-29T02:32:49.594+0000] {subprocess.py:93} INFO - <td align="right" valign="top" width="1"><font face="Arial" size="2">5/5(0)</font></td>
+[2024-09-29T02:32:49.594+0000] {subprocess.py:93} INFO - </tr>
+[2024-09-29T02:32:49.595+0000] {subprocess.py:93} INFO - <tr bgcolor="WHITE">
+[2024-09-29T02:32:49.595+0000] {subprocess.py:93} INFO - <td align="left" valign="top" width="85"><font face="Arial" size="2"><a href="1921-12.htm">05 Dec 1921</a></font></td>
+[2024-09-29T02:32:49.595+0000] {subprocess.py:93} INFO - <td align="left" valign="top"><font face="Arial" size="2">Near Murchinson River, Australia<br/>West Australian Airways
+[2024-09-29T02:32:49.595+0000] {subprocess.py:93} INFO - </font></td>
+[2024-09-29T02:32:49.595+0000] {subprocess.py:93} INFO - <td align="left" valign="top"><font face="Arial" size="2">Bristol 28 Tourer<br/>G-AUDI</font></td>
+[2024-09-29T02:32:49.595+0000] {subprocess.py:93} INFO - <td align="right" valign="top" width="1"><font face="Arial" size="2">2/2(0)</font></td>
+[2024-09-29T02:32:49.595+0000] {subprocess.py:93} INFO - </tr>
+[2024-09-29T02:32:49.596+0000] {subprocess.py:93} INFO - </table>
+[2024-09-29T02:32:49.596+0000] {subprocess.py:93} INFO - </center>
+[2024-09-29T02:32:49.596+0000] {subprocess.py:93} INFO - </div>
+[2024-09-29T02:32:49.596+0000] {subprocess.py:93} INFO - <blockquote>
+[2024-09-29T02:32:49.596+0000] {subprocess.py:93} INFO - <br/>
+[2024-09-29T02:32:49.596+0000] {subprocess.py:93} INFO - <font face="Arial" size="2">
+[2024-09-29T02:32:49.596+0000] {subprocess.py:93} INFO - <a href="http://www.planecrashinfo.com/index.html">Return to Home Page</a>
+[2024-09-29T02:32:49.596+0000] {subprocess.py:93} INFO - </font></blockquote>
+[2024-09-29T02:32:49.597+0000] {subprocess.py:93} INFO - <blockquote>
+[2024-09-29T02:32:49.597+0000] {subprocess.py:93} INFO - <p><font face="Arial" size="1">Copyright © Richard Kebabjian / www.planecrashinfo.com
+[2024-09-29T02:32:49.597+0000] {subprocess.py:93} INFO - </font></p></blockquote>
+[2024-09-29T02:32:49.597+0000] {subprocess.py:93} INFO - </body>
+[2024-09-29T02:32:49.597+0000] {subprocess.py:93} INFO - <script>'undefined'=== typeof _trfq || (window._trfq = []);'undefined'=== typeof _trfd && (window._trfd=[]),_trfd.push({'tccl.baseHost':'secureserver.net'},{'ap':'cpsh-oh'},{'server':'p3plzcpnl505503'},{'dcenter':'p3'},{'cp_id':'7025743'},{'cp_cache':''},{'cp_cl':'8'}) // Monitoring performance to make your website faster. If you want to opt-out, please contact web hosting support.</script><script src="https://img1.wsimg.com/traffic-assets/js/tccl.min.js"></script></html>
+[2024-09-29T02:32:49.597+0000] {subprocess.py:93} INFO - 
+[2024-09-29T02:32:49.597+0000] {subprocess.py:93} INFO - Data saved to S3
+[2024-09-29T02:32:49.653+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2024-09-29T02:32:49.654+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2024-09-29T02:32:49.668+0000] {taskinstance.py:1205} INFO - Marking task as SUCCESS. dag_id=AirCrashInvestigation_pipeline, task_id=scrape_LoadS3, execution_date=20240929T023131, start_date=20240929T023132, end_date=20240929T023249
+[2024-09-29T02:32:49.694+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2024-09-29T02:32:49.706+0000] {taskinstance.py:3482} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2024-09-29T02:32:49.707+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

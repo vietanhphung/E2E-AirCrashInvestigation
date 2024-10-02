@@ -39,7 +39,7 @@ def convertFormat(o):
         o["fatalities"] = getInt(o["fatalities"])if o["fatalities"] != "?" else None
         o["ground"] = getInt(o["ground"])if o["ground"] != "?" else None
         o["summary"] = str(o["summary"])if o["summary"] != "?" else None 
-        print(o['time'])
+        #print(o['time'])
         return o
     else:
         return None
@@ -49,11 +49,7 @@ def convertFormat(o):
 
 dataList = []
 def dataIngest():
-<<<<<<< Updated upstream
     df = pd.read_csv(getFromS3('bronze.csv')).dropna(how='all') # read and drop all empty rows
-=======
-    df = pd.read_csv(readS3file('bronze.csv')).dropna(how='all') # read and drop all empty rows
->>>>>>> Stashed changes
     result = df.to_dict(orient='records')
     for d in result:
         if d != {}:

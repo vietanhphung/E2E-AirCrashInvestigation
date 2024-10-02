@@ -1,0 +1,77 @@
+[2024-09-29T02:11:37.108+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2024-09-29T02:11:37.121+0000] {taskinstance.py:2073} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: AirCrashInvestigation_pipeline.validate_LoadS3 manual__2024-09-29T02:11:34.375907+00:00 [queued]>
+[2024-09-29T02:11:37.126+0000] {taskinstance.py:2073} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: AirCrashInvestigation_pipeline.validate_LoadS3 manual__2024-09-29T02:11:34.375907+00:00 [queued]>
+[2024-09-29T02:11:37.126+0000] {taskinstance.py:2303} INFO - Starting attempt 1 of 2
+[2024-09-29T02:11:37.133+0000] {taskinstance.py:2327} INFO - Executing <Task(BashOperator): validate_LoadS3> on 2024-09-29 02:11:34.375907+00:00
+[2024-09-29T02:11:37.136+0000] {warnings.py:110} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61: DeprecationWarning: This process (pid=107) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2024-09-29T02:11:37.137+0000] {standard_task_runner.py:63} INFO - Started process 108 to run task
+[2024-09-29T02:11:37.137+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'AirCrashInvestigation_pipeline', 'validate_LoadS3', 'manual__2024-09-29T02:11:34.375907+00:00', '--job-id', '16', '--raw', '--subdir', 'DAGS_FOLDER/main_dag.py', '--cfg-path', '/tmp/tmpabmx8jkr']
+[2024-09-29T02:11:37.139+0000] {standard_task_runner.py:91} INFO - Job 16: Subtask validate_LoadS3
+[2024-09-29T02:11:37.165+0000] {task_command.py:426} INFO - Running <TaskInstance: AirCrashInvestigation_pipeline.validate_LoadS3 manual__2024-09-29T02:11:34.375907+00:00 [running]> on host 7b437d7ff517
+[2024-09-29T02:11:37.206+0000] {taskinstance.py:2644} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='AirCrashInvestigation_pipeline' AIRFLOW_CTX_TASK_ID='validate_LoadS3' AIRFLOW_CTX_EXECUTION_DATE='2024-09-29T02:11:34.375907+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-09-29T02:11:34.375907+00:00'
+[2024-09-29T02:11:37.207+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2024-09-29T02:11:37.214+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2024-09-29T02:11:37.214+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', 'python3 /opt/***/tasks/dataValidate.py']
+[2024-09-29T02:11:37.219+0000] {subprocess.py:86} INFO - Output:
+[2024-09-29T02:11:40.081+0000] {subprocess.py:93} INFO - data from S3 extracted
+[2024-09-29T02:11:40.082+0000] {subprocess.py:93} INFO - 1718
+[2024-09-29T02:11:40.082+0000] {subprocess.py:93} INFO - None
+[2024-09-29T02:11:40.083+0000] {subprocess.py:93} INFO - 630
+[2024-09-29T02:11:40.083+0000] {subprocess.py:93} INFO - None
+[2024-09-29T02:11:40.083+0000] {subprocess.py:93} INFO - 1830
+[2024-09-29T02:11:40.083+0000] {subprocess.py:93} INFO - 1030
+[2024-09-29T02:11:40.083+0000] {subprocess.py:93} INFO - 100
+[2024-09-29T02:11:40.084+0000] {subprocess.py:93} INFO - 1520
+[2024-09-29T02:11:40.084+0000] {subprocess.py:93} INFO - None
+[2024-09-29T02:11:40.084+0000] {subprocess.py:93} INFO - 100
+[2024-09-29T02:11:40.084+0000] {subprocess.py:93} INFO - 2345
+[2024-09-29T02:11:40.084+0000] {subprocess.py:93} INFO - None
+[2024-09-29T02:11:40.084+0000] {subprocess.py:93} INFO - 2345
+[2024-09-29T02:11:40.084+0000] {subprocess.py:93} INFO - None
+[2024-09-29T02:11:40.084+0000] {subprocess.py:93} INFO - None
+[2024-09-29T02:11:40.084+0000] {subprocess.py:93} INFO - 515
+[2024-09-29T02:11:40.085+0000] {subprocess.py:93} INFO - 845
+[2024-09-29T02:11:40.085+0000] {subprocess.py:93} INFO - None
+[2024-09-29T02:11:40.085+0000] {subprocess.py:93} INFO - 700
+[2024-09-29T02:11:40.085+0000] {subprocess.py:93} INFO - 745
+[2024-09-29T02:11:40.085+0000] {subprocess.py:93} INFO - 2130
+[2024-09-29T02:11:40.085+0000] {subprocess.py:93} INFO - None
+[2024-09-29T02:11:40.085+0000] {subprocess.py:93} INFO - 1000
+[2024-09-29T02:11:40.086+0000] {subprocess.py:93} INFO - None
+[2024-09-29T02:11:40.086+0000] {subprocess.py:93} INFO - None
+[2024-09-29T02:11:40.086+0000] {subprocess.py:93} INFO - None
+[2024-09-29T02:11:40.086+0000] {subprocess.py:93} INFO - 1655
+[2024-09-29T02:11:40.086+0000] {subprocess.py:93} INFO - None
+[2024-09-29T02:11:40.086+0000] {subprocess.py:93} INFO - None
+[2024-09-29T02:11:40.086+0000] {subprocess.py:93} INFO - None
+[2024-09-29T02:11:40.086+0000] {subprocess.py:93} INFO - None
+[2024-09-29T02:11:40.086+0000] {subprocess.py:93} INFO - None
+[2024-09-29T02:11:40.086+0000] {subprocess.py:93} INFO - None
+[2024-09-29T02:11:40.087+0000] {subprocess.py:93} INFO - None
+[2024-09-29T02:11:40.087+0000] {subprocess.py:93} INFO - None
+[2024-09-29T02:11:40.087+0000] {subprocess.py:93} INFO - None
+[2024-09-29T02:11:40.087+0000] {subprocess.py:93} INFO - None
+[2024-09-29T02:11:40.087+0000] {subprocess.py:93} INFO - None
+[2024-09-29T02:11:40.087+0000] {subprocess.py:93} INFO - None
+[2024-09-29T02:11:40.087+0000] {subprocess.py:93} INFO - None
+[2024-09-29T02:11:40.087+0000] {subprocess.py:93} INFO - None
+[2024-09-29T02:11:40.087+0000] {subprocess.py:93} INFO - None
+[2024-09-29T02:11:40.087+0000] {subprocess.py:93} INFO - None
+[2024-09-29T02:11:40.088+0000] {subprocess.py:93} INFO - None
+[2024-09-29T02:11:40.088+0000] {subprocess.py:93} INFO - None
+[2024-09-29T02:11:40.088+0000] {subprocess.py:93} INFO - None
+[2024-09-29T02:11:40.088+0000] {subprocess.py:93} INFO - None
+[2024-09-29T02:11:40.088+0000] {subprocess.py:93} INFO - None
+[2024-09-29T02:11:40.088+0000] {subprocess.py:93} INFO - None
+[2024-09-29T02:11:40.088+0000] {subprocess.py:93} INFO - 1215
+[2024-09-29T02:11:40.088+0000] {subprocess.py:93} INFO - None
+[2024-09-29T02:11:40.088+0000] {subprocess.py:93} INFO - Data transformed
+[2024-09-29T02:11:40.089+0000] {subprocess.py:93} INFO - Data saved to S3
+[2024-09-29T02:11:40.209+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2024-09-29T02:11:40.210+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2024-09-29T02:11:40.224+0000] {taskinstance.py:1205} INFO - Marking task as SUCCESS. dag_id=AirCrashInvestigation_pipeline, task_id=validate_LoadS3, execution_date=20240929T021134, start_date=20240929T021137, end_date=20240929T021140
+[2024-09-29T02:11:40.237+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2024-09-29T02:11:40.251+0000] {taskinstance.py:3482} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2024-09-29T02:11:40.252+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

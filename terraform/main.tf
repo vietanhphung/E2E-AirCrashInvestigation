@@ -86,7 +86,7 @@ resource "aws_security_group" "flightanalysis_redshift_sg" {
 
 # Create an S3 bucket
 resource "aws_s3_bucket" "flightanalysis" {
-  bucket = "flightdatabucket1"
+  bucket = var.bucket_name
   force_destroy = true
   tags = {
     Name        = "flightanalysis-bucket"
@@ -171,14 +171,6 @@ resource "aws_redshift_cluster" "flightanalysis_cluster" {
   }
 }
 
-# Output the Redshift endpoint and IAM role
-output "redshift_endpoint" {
-  value = aws_redshift_cluster.flightanalysis_cluster.endpoint
-}
-
-output "redshift_iam_role" {
-  value = aws_iam_role.flightanalysis_redshift_role.arn
-}
 
 
 resource "aws_budgets_budget" "monthly-budget" {
@@ -196,4 +188,38 @@ resource "aws_budgets_budget" "monthly-budget" {
     notification_type          = "FORECASTED"
     subscriber_email_addresses = ["anh.phung@torontomu.ca"]
   }
+}
+
+
+output "bucket_name" {
+  value = aws_s3_bucket.flightanalysis.bucket
+}
+
+# Output for Redshift details
+output "host" {
+  value = aws_redshift_cluster.flightanalysis_cluster.endpoint
+}
+
+output "port" {
+  value = aws_redshift_cluster.flightanalysis_cluster.port
+}
+
+output "dbname" {
+  value = var.dbname
+}
+
+output "user" {
+  value = "admin"  
+}
+
+output "password" {
+  value = var.redshift_password  
+}
+
+output "table" {
+  value = "flight_incidents"  
+}
+
+output "role" {
+  value = aws_iam_role.flightanalysis_redshift_role.arn
 }

@@ -1,0 +1,118 @@
+[2024-10-02T02:09:38.338+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2024-10-02T02:09:38.349+0000] {taskinstance.py:2073} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: AirCrashInvestigation_pipeline.scrape_LoadS3 manual__2024-10-02T02:09:37.160970+00:00 [queued]>
+[2024-10-02T02:09:38.353+0000] {taskinstance.py:2073} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: AirCrashInvestigation_pipeline.scrape_LoadS3 manual__2024-10-02T02:09:37.160970+00:00 [queued]>
+[2024-10-02T02:09:38.353+0000] {taskinstance.py:2303} INFO - Starting attempt 1 of 2
+[2024-10-02T02:09:38.359+0000] {taskinstance.py:2327} INFO - Executing <Task(BashOperator): scrape_LoadS3> on 2024-10-02 02:09:37.160970+00:00
+[2024-10-02T02:09:38.362+0000] {warnings.py:110} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61: DeprecationWarning: This process (pid=99) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2024-10-02T02:09:38.363+0000] {standard_task_runner.py:63} INFO - Started process 100 to run task
+[2024-10-02T02:09:38.363+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'AirCrashInvestigation_pipeline', 'scrape_LoadS3', 'manual__2024-10-02T02:09:37.160970+00:00', '--job-id', '12', '--raw', '--subdir', 'DAGS_FOLDER/main_dag.py', '--cfg-path', '/tmp/tmpbonp4x8k']
+[2024-10-02T02:09:38.365+0000] {standard_task_runner.py:91} INFO - Job 12: Subtask scrape_LoadS3
+[2024-10-02T02:09:38.392+0000] {task_command.py:426} INFO - Running <TaskInstance: AirCrashInvestigation_pipeline.scrape_LoadS3 manual__2024-10-02T02:09:37.160970+00:00 [running]> on host ac8ffcfe4778
+[2024-10-02T02:09:38.433+0000] {taskinstance.py:2644} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='AirCrashInvestigation_pipeline' AIRFLOW_CTX_TASK_ID='scrape_LoadS3' AIRFLOW_CTX_EXECUTION_DATE='2024-10-02T02:09:37.160970+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-10-02T02:09:37.160970+00:00'
+[2024-10-02T02:09:38.434+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2024-10-02T02:09:38.443+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2024-10-02T02:09:38.444+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', 'python3 /opt/***/tasks/flightDataWebScrape.py']
+[2024-10-02T02:09:38.448+0000] {subprocess.py:86} INFO - Output:
+[2024-10-02T02:11:42.758+0000] {subprocess.py:93} INFO - 1920 data accessed
+[2024-10-02T02:11:42.762+0000] {subprocess.py:93} INFO - fetched empty data in1920
+[2024-10-02T02:11:42.763+0000] {subprocess.py:93} INFO - fetched empty data in1920
+[2024-10-02T02:11:42.763+0000] {subprocess.py:93} INFO - fetched empty data in1920
+[2024-10-02T02:11:42.764+0000] {subprocess.py:93} INFO - fetched empty data in1920
+[2024-10-02T02:11:42.764+0000] {subprocess.py:93} INFO - fetched empty data in1920
+[2024-10-02T02:11:42.764+0000] {subprocess.py:93} INFO - fetched empty data in1920
+[2024-10-02T02:11:42.765+0000] {subprocess.py:93} INFO - fetched empty data in1920
+[2024-10-02T02:11:42.765+0000] {subprocess.py:93} INFO - fetched empty data in1920
+[2024-10-02T02:11:42.765+0000] {subprocess.py:93} INFO - fetched empty data in1920
+[2024-10-02T02:11:42.766+0000] {subprocess.py:93} INFO - fetched empty data in1920
+[2024-10-02T02:11:42.766+0000] {subprocess.py:93} INFO - fetched empty data in1920
+[2024-10-02T02:11:42.766+0000] {subprocess.py:93} INFO - fetched empty data in1920
+[2024-10-02T02:11:42.767+0000] {subprocess.py:93} INFO - fetched empty data in1920
+[2024-10-02T02:11:42.767+0000] {subprocess.py:93} INFO - fetched empty data in1920
+[2024-10-02T02:11:42.767+0000] {subprocess.py:93} INFO - fetched empty data in1920
+[2024-10-02T02:11:42.768+0000] {subprocess.py:93} INFO - Traceback (most recent call last):
+[2024-10-02T02:11:42.768+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.12/site-packages/urllib3/connection.py", line 174, in _new_conn
+[2024-10-02T02:11:42.768+0000] {subprocess.py:93} INFO -     conn = connection.create_connection(
+[2024-10-02T02:11:42.769+0000] {subprocess.py:93} INFO -            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2024-10-02T02:11:42.769+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.12/site-packages/urllib3/util/connection.py", line 95, in create_connection
+[2024-10-02T02:11:42.769+0000] {subprocess.py:93} INFO -     raise err
+[2024-10-02T02:11:42.770+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.12/site-packages/urllib3/util/connection.py", line 85, in create_connection
+[2024-10-02T02:11:42.770+0000] {subprocess.py:93} INFO -     sock.connect(sa)
+[2024-10-02T02:11:42.771+0000] {subprocess.py:93} INFO - ConnectionRefusedError: [Errno 111] Connection refused
+[2024-10-02T02:11:42.771+0000] {subprocess.py:93} INFO - 
+[2024-10-02T02:11:42.771+0000] {subprocess.py:93} INFO - During handling of the above exception, another exception occurred:
+[2024-10-02T02:11:42.772+0000] {subprocess.py:93} INFO - 
+[2024-10-02T02:11:42.772+0000] {subprocess.py:93} INFO - Traceback (most recent call last):
+[2024-10-02T02:11:42.772+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.12/site-packages/urllib3/connectionpool.py", line 715, in urlopen
+[2024-10-02T02:11:42.773+0000] {subprocess.py:93} INFO -     httplib_response = self._make_request(
+[2024-10-02T02:11:42.773+0000] {subprocess.py:93} INFO -                        ^^^^^^^^^^^^^^^^^^^
+[2024-10-02T02:11:42.773+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.12/site-packages/urllib3/connectionpool.py", line 404, in _make_request
+[2024-10-02T02:11:42.773+0000] {subprocess.py:93} INFO -     self._validate_conn(conn)
+[2024-10-02T02:11:42.773+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.12/site-packages/urllib3/connectionpool.py", line 1058, in _validate_conn
+[2024-10-02T02:11:42.774+0000] {subprocess.py:93} INFO -     conn.connect()
+[2024-10-02T02:11:42.774+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.12/site-packages/urllib3/connection.py", line 363, in connect
+[2024-10-02T02:11:42.774+0000] {subprocess.py:93} INFO -     self.sock = conn = self._new_conn()
+[2024-10-02T02:11:42.774+0000] {subprocess.py:93} INFO -                        ^^^^^^^^^^^^^^^^
+[2024-10-02T02:11:42.775+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.12/site-packages/urllib3/connection.py", line 186, in _new_conn
+[2024-10-02T02:11:42.775+0000] {subprocess.py:93} INFO -     raise NewConnectionError(
+[2024-10-02T02:11:42.775+0000] {subprocess.py:93} INFO - urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPSConnection object at 0xffff807d6ae0>: Failed to establish a new connection: [Errno 111] Connection refused
+[2024-10-02T02:11:42.776+0000] {subprocess.py:93} INFO - 
+[2024-10-02T02:11:42.776+0000] {subprocess.py:93} INFO - During handling of the above exception, another exception occurred:
+[2024-10-02T02:11:42.776+0000] {subprocess.py:93} INFO - 
+[2024-10-02T02:11:42.776+0000] {subprocess.py:93} INFO - Traceback (most recent call last):
+[2024-10-02T02:11:42.776+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.12/site-packages/requests/adapters.py", line 486, in send
+[2024-10-02T02:11:42.777+0000] {subprocess.py:93} INFO -     resp = conn.urlopen(
+[2024-10-02T02:11:42.777+0000] {subprocess.py:93} INFO -            ^^^^^^^^^^^^^
+[2024-10-02T02:11:42.777+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.12/site-packages/urllib3/connectionpool.py", line 799, in urlopen
+[2024-10-02T02:11:42.777+0000] {subprocess.py:93} INFO -     retries = retries.increment(
+[2024-10-02T02:11:42.778+0000] {subprocess.py:93} INFO -               ^^^^^^^^^^^^^^^^^^
+[2024-10-02T02:11:42.778+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.12/site-packages/urllib3/util/retry.py", line 592, in increment
+[2024-10-02T02:11:42.778+0000] {subprocess.py:93} INFO -     raise MaxRetryError(_pool, url, error or ResponseError(cause))
+[2024-10-02T02:11:42.778+0000] {subprocess.py:93} INFO - urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='www.planecrashinfo.com', port=443): Max retries exceeded with url: /1920/1920-23.htm (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0xffff807d6ae0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2024-10-02T02:11:42.779+0000] {subprocess.py:93} INFO - 
+[2024-10-02T02:11:42.779+0000] {subprocess.py:93} INFO - During handling of the above exception, another exception occurred:
+[2024-10-02T02:11:42.779+0000] {subprocess.py:93} INFO - 
+[2024-10-02T02:11:42.779+0000] {subprocess.py:93} INFO - Traceback (most recent call last):
+[2024-10-02T02:11:42.779+0000] {subprocess.py:93} INFO -   File "/opt/***/tasks/flightDataWebScrape.py", line 91, in <module>
+[2024-10-02T02:11:42.780+0000] {subprocess.py:93} INFO -     main()
+[2024-10-02T02:11:42.780+0000] {subprocess.py:93} INFO -     ^^^^^^
+[2024-10-02T02:11:42.780+0000] {subprocess.py:93} INFO -   File "/opt/***/tasks/flightDataWebScrape.py", line 37, in main
+[2024-10-02T02:11:42.780+0000] {subprocess.py:93} INFO -     r = requests.get(url + str(year) + s + end2)
+[2024-10-02T02:11:42.780+0000] {subprocess.py:93} INFO -         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2024-10-02T02:11:42.781+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.12/site-packages/requests/api.py", line 73, in get
+[2024-10-02T02:11:42.781+0000] {subprocess.py:93} INFO -     return request("get", url, params=params, **kwargs)
+[2024-10-02T02:11:42.781+0000] {subprocess.py:93} INFO -            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2024-10-02T02:11:42.781+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.12/site-packages/requests/api.py", line 59, in request
+[2024-10-02T02:11:42.781+0000] {subprocess.py:93} INFO -     return session.request(method=method, url=url, **kwargs)
+[2024-10-02T02:11:42.781+0000] {subprocess.py:93} INFO -            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2024-10-02T02:11:42.782+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.12/site-packages/requests/sessions.py", line 589, in request
+[2024-10-02T02:11:42.782+0000] {subprocess.py:93} INFO -     resp = self.send(prep, **send_kwargs)
+[2024-10-02T02:11:42.782+0000] {subprocess.py:93} INFO -            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2024-10-02T02:11:42.782+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.12/site-packages/requests/sessions.py", line 703, in send
+[2024-10-02T02:11:42.782+0000] {subprocess.py:93} INFO -     r = adapter.send(request, **kwargs)
+[2024-10-02T02:11:42.783+0000] {subprocess.py:93} INFO -         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2024-10-02T02:11:42.783+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.12/site-packages/requests/adapters.py", line 519, in send
+[2024-10-02T02:11:42.784+0000] {subprocess.py:93} INFO -     raise ConnectionError(e, request=request)
+[2024-10-02T02:11:42.784+0000] {subprocess.py:93} INFO - requests.exceptions.ConnectionError: HTTPSConnectionPool(host='www.planecrashinfo.com', port=443): Max retries exceeded with url: /1920/1920-23.htm (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0xffff807d6ae0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2024-10-02T02:11:42.810+0000] {subprocess.py:97} INFO - Command exited with return code 1
+[2024-10-02T02:11:42.811+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2024-10-02T02:11:42.817+0000] {taskinstance.py:2890} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 465, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 432, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 400, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/bash.py", line 243, in execute
+    raise AirflowException(
+airflow.exceptions.AirflowException: Bash command failed. The command returned a non-zero exit code 1.
+[2024-10-02T02:11:42.820+0000] {taskinstance.py:1205} INFO - Marking task as UP_FOR_RETRY. dag_id=AirCrashInvestigation_pipeline, task_id=scrape_LoadS3, execution_date=20241002T020937, start_date=20241002T020938, end_date=20241002T021142
+[2024-10-02T02:11:42.828+0000] {standard_task_runner.py:110} ERROR - Failed to execute job 12 for task scrape_LoadS3 (Bash command failed. The command returned a non-zero exit code 1.; 100)
+[2024-10-02T02:11:42.850+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 1
+[2024-10-02T02:11:42.860+0000] {taskinstance.py:3482} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-10-02T02:11:42.861+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

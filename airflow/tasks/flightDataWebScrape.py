@@ -1,11 +1,6 @@
 import requests
 from bs4 import BeautifulSoup
 from time import sleep
-<<<<<<< Updated upstream
-=======
-#from tqdm import tqdm
->>>>>>> Stashed changes
-import json
 import csv
 from pipelineActions import *
 
@@ -18,29 +13,30 @@ def main():
     s = "/"
     
     #get date from the all the yearly tables
-<<<<<<< Updated upstream
-    for year in (range(1920,1920+1)):
-=======
-    #for year in tqdm(range(1920,2024+1)):
-    for year in (range(1920,2024+1)):
->>>>>>> Stashed changes
-        r = requests.get(url + str(year) + s + str(year) + end)
-        soup = BeautifulSoup(r.content, 'html.parser')
-        rows = soup.select("table tr")
-        #print(rows)
+    for year in (range(1920,1950+1)):
+        try: 
+            r = requests.get(url + str(year) + s + str(year) + end)
+            sleep(2)
+            soup = BeautifulSoup(r.content, 'html.parser')
+            rows = soup.select("table tr")
+            if rows == [] : raise Exception("Error fetching" + str(year) + "'s data")
+            else: print(str(year) + " data accessed")
+        except requests.ConnectionError as e:
+            raise SystemExit(e)
+            print("Error accessing page")
+       
+        
         
         #follow each link to access detailed data of each accident
         for i in range(1,len(rows)):
             row = rows[i]
             date = row.select_one('td').text.strip()
             end2 = row.select_one('td a')['href']
-            #print(url + str(year) + s + end2)
 
             #access each link in the row for detail information
             r = requests.get(url + str(year) + s + end2)
-            #print(url + str(year) + s + end2)
+            sleep(2)
             soup2 = BeautifulSoup(r.content, 'html.parser')
-            #print(soup2)
             trs = soup2.select("table tr")
             
             #take data and rough format for JSON
@@ -74,8 +70,8 @@ def main():
                         d["ground"] = info
                     case 13:
                         d["summary"] = info
-                
-            infoList.append(d)
+            if d  : infoList.append(d)
+            else: print("fetched empty data in" + str(year))
             #print(len(infoList))
 
             sleep(1)
@@ -92,8 +88,12 @@ def loadCSV():
 
 
 
-main()    
+main()  
 saveToS3(infoList, 'bronze.csv')
+
+
+
+
 
 
 

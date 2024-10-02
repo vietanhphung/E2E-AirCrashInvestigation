@@ -1,39 +1,59 @@
-import pipelineActions
+
 import psycopg2
-import boto3
-import configparser
 import pathlib
+from dotenv import dotenv_values
 
 
-
+configuration_path = pathlib.Path(__file__).parent.resolve()
 script_path = pathlib.Path(__file__).parent.resolve()
-config = configparser.ConfigParser()
-config_file_path = script_path / 'pipeline.conf'
-config.read(config_file_path)
-bucket = config.get('aws_boto_credentials', 'bucket_name')
-file =  config.get('aws_boto_credentials', 'file')
-
-host = config.get('redshift','host')
-port = config.get('redshift','port')
-dbname = config.get('redshift','dbname')
-user = config.get('redshift','user')
-password = config.get('redshift','password')
-table = config.get('redshift','table')
-role = config.get('redshift','role')
+config = dotenv_values(f"{configuration_path}/pipeline.conf")
 
 
 
+host = config["host"].split(":")[0]
+bucket= config["bucket_name"]
+port  = config["port"]
+dbname  = config["dbname"]
+user  = config["user"]
+password  = config["password"]
+table  = config["table"]
+role  = config["role"]
 
-# SQL COPY command for Redshift
-copy_query = f"""
-    COPY {table}
-    FROM 's3://{bucket}/{file}'
-    IAM_ROLE '{role}'
+
+
+create_table_query = f"""
+    CREATE TABLE IF NOT EXISTS flight_incidents (
+        incident_date INTEGER,
+        incident_time INTEGER,
+        location VARCHAR(255),               -- Location of the incident
+        operator VARCHAR(255),               -- Operator of the flight
+        flight VARCHAR(255),                 -- Flight number
+        route VARCHAR(255),                  -- Flight route
+        aircraft VARCHAR(255),              -- Aircraft type/model
+        registration VARCHAR(255),           -- Aircraft registration
+        cnln VARCHAR(255),                   -- Certificate of Registration Number
+        aboard INT,                          -- Number of people aboard
+        fatalities INT,                      -- Number of fatalities
+        ground INT,                          -- Number of people on the ground affected
+        summary VARCHAR(5000)                       -- Summary of the incident
+    );
+    """
+
+copy_table_query = f"""
+    CREATE TABLE tempData (LIKE flight_incidents);
+
+    BEGIN TRANSACTION;
+    COPY tempData
+    FROM 's3://flightcrashbucket/silver.csv'
+    IAM_ROLE 'arn:aws:iam::038462789002:role/flightanalysis-redshift-s3-access-role'
     FORMAT AS CSV
     DELIMITER ','
     IGNOREHEADER 1
     REGION 'us-east-1';
-"""
+    DROP TABLE flight_incidents;
+    ALTER TABLE tempData RENAME TO flight_incidents;
+    COMMIT TRANSACTION;
+    """
 
 def load_csv_to_redshift():
     conn = None
@@ -48,14 +68,18 @@ def load_csv_to_redshift():
         )
         cur = conn.cursor()
         print("Connected to Redshift")
-        
-        # Execute COPY command to load data from S3 to Redshift
-        cur.execute(copy_query)
+        # Execute command to crate table and load data from S3 to Redshift
+        cur.execute(create_table_query)
+        cur.execute(copy_table_query)
         conn.commit()
-        print("Data loaded successfully!")
+        print("Command executed")
+        print(host,bucket,port,dbname,user,password,table,role)
     
+    except psycopg2.Error as db_err:
+        print(f"Database error: {db_err}")
     except Exception as e:
-        print(f"Error: {e}")
+        print(f"General error: {e}")
+
     
     finally:
         if conn:

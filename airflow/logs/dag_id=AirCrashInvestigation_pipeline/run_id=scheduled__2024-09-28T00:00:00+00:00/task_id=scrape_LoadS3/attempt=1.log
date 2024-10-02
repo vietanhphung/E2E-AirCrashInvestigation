@@ -1,0 +1,249 @@
+[2024-09-29T02:10:37.690+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2024-09-29T02:10:37.744+0000] {taskinstance.py:2073} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: AirCrashInvestigation_pipeline.scrape_LoadS3 scheduled__2024-09-28T00:00:00+00:00 [queued]>
+[2024-09-29T02:10:37.782+0000] {taskinstance.py:2073} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: AirCrashInvestigation_pipeline.scrape_LoadS3 scheduled__2024-09-28T00:00:00+00:00 [queued]>
+[2024-09-29T02:10:37.784+0000] {taskinstance.py:2303} INFO - Starting attempt 1 of 2
+[2024-09-29T02:10:37.829+0000] {taskinstance.py:2327} INFO - Executing <Task(BashOperator): scrape_LoadS3> on 2024-09-28 00:00:00+00:00
+[2024-09-29T02:10:37.837+0000] {warnings.py:110} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61: DeprecationWarning: This process (pid=70) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2024-09-29T02:10:37.841+0000] {standard_task_runner.py:63} INFO - Started process 76 to run task
+[2024-09-29T02:10:37.846+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'AirCrashInvestigation_pipeline', 'scrape_LoadS3', 'scheduled__2024-09-28T00:00:00+00:00', '--job-id', '5', '--raw', '--subdir', 'DAGS_FOLDER/main_dag.py', '--cfg-path', '/tmp/tmpqt5rp6cz']
+[2024-09-29T02:10:37.869+0000] {standard_task_runner.py:91} INFO - Job 5: Subtask scrape_LoadS3
+[2024-09-29T02:10:38.028+0000] {task_command.py:426} INFO - Running <TaskInstance: AirCrashInvestigation_pipeline.scrape_LoadS3 scheduled__2024-09-28T00:00:00+00:00 [running]> on host 7b437d7ff517
+[2024-09-29T02:10:38.227+0000] {taskinstance.py:2644} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='AirCrashInvestigation_pipeline' AIRFLOW_CTX_TASK_ID='scrape_LoadS3' AIRFLOW_CTX_EXECUTION_DATE='2024-09-28T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-09-28T00:00:00+00:00'
+[2024-09-29T02:10:38.233+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2024-09-29T02:10:38.257+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2024-09-29T02:10:38.259+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', 'python3 /opt/***/tasks/flightDataWebScrape.py']
+[2024-09-29T02:10:38.274+0000] {subprocess.py:86} INFO - Output:
+[2024-09-29T02:11:23.247+0000] {local_task_job_runner.py:310} WARNING - State of this instance has been externally set to queued. Terminating instance.
+[2024-09-29T02:11:23.250+0000] {local_task_job_runner.py:222} INFO - ::endgroup::
+[2024-09-29T02:11:23.253+0000] {process_utils.py:132} INFO - Sending 15 to group 76. PIDs of all processes in the group: [80, 76]
+[2024-09-29T02:11:23.253+0000] {process_utils.py:87} INFO - Sending the signal 15 to group 76
+[2024-09-29T02:11:23.253+0000] {taskinstance.py:2607} ERROR - Received SIGTERM. Terminating subprocesses.
+[2024-09-29T02:11:23.254+0000] {subprocess.py:104} INFO - Sending SIGTERM signal to process group
+[2024-09-29T02:11:23.254+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2024-09-29T02:11:23.262+0000] {taskinstance.py:2890} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 465, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 432, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 400, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/bash.py", line 234, in execute
+    result = self.subprocess_hook.run_command(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/hooks/subprocess.py", line 91, in run_command
+    for raw_line in iter(self.sub_process.stdout.readline, b""):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 2609, in signal_handler
+    raise AirflowTaskTerminated("Task received SIGTERM signal")
+airflow.exceptions.AirflowTaskTerminated: Task received SIGTERM signal
+[2024-09-29T02:11:23.266+0000] {taskinstance.py:1205} INFO - Marking task as UP_FOR_RETRY. dag_id=AirCrashInvestigation_pipeline, task_id=scrape_LoadS3, execution_date=20240928T000000, start_date=, end_date=20240929T021123
+[2024-09-29T02:11:23.274+0000] {standard_task_runner.py:110} ERROR - Failed to execute job 5 for task scrape_LoadS3 ((psycopg2.errors.UniqueViolation) duplicate key value violates unique constraint "dag_run_dag_id_execution_date_key"
+DETAIL:  Key (dag_id, execution_date)=(AirCrashInvestigation_pipeline, 2024-09-28 00:00:00+00) already exists.
+
+[SQL: INSERT INTO dag_run (id, dag_id, queued_at, execution_date, start_date, end_date, state, run_id, creating_job_id, external_trigger, run_type, conf, data_interval_start, data_interval_end, last_scheduling_decision, dag_hash, log_template_id, updated_at, clear_number) VALUES (%(id)s, %(dag_id)s, %(queued_at)s, %(execution_date)s, %(start_date)s, %(end_date)s, %(state)s, %(run_id)s, %(creating_job_id)s, %(external_trigger)s, %(run_type)s, %(conf)s, %(data_interval_start)s, %(data_interval_end)s, %(last_scheduling_decision)s, %(dag_hash)s, %(log_template_id)s, %(updated_at)s, %(clear_number)s)]
+[parameters: {'id': 6, 'dag_id': 'AirCrashInvestigation_pipeline', 'queued_at': datetime.datetime(2024, 9, 29, 2, 10, 36, 700614, tzinfo=Timezone('UTC')), 'execution_date': datetime.datetime(2024, 9, 28, 0, 0, tzinfo=Timezone('UTC')), 'start_date': datetime.datetime(2024, 9, 29, 2, 10, 36, 708278, tzinfo=Timezone('UTC')), 'end_date': None, 'state': 'running', 'run_id': 'scheduled__2024-09-28T00:00:00+00:00', 'creating_job_id': 2, 'external_trigger': False, 'run_type': 'scheduled', 'conf': <psycopg2.extensions.Binary object at 0xffffa0929d70>, 'data_interval_start': datetime.datetime(2024, 9, 28, 0, 0, tzinfo=Timezone('UTC')), 'data_interval_end': datetime.datetime(2024, 9, 29, 0, 0, tzinfo=Timezone('UTC')), 'last_scheduling_decision': datetime.datetime(2024, 9, 29, 2, 10, 37, 922705, tzinfo=Timezone('UTC')), 'dag_hash': '430e9cf2cc72fa71822c5198d39b3e9d', 'log_template_id': 2, 'updated_at': datetime.datetime(2024, 9, 29, 2, 10, 37, 945520, tzinfo=Timezone('UTC')), 'clear_number': 0}]
+(Background on this error at: https://sqlalche.me/e/14/gkpj); 76)
+[2024-09-29T02:11:23.285+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=80, status='terminated', started='02:10:37') (80) terminated with exit code None
+[2024-09-29T02:11:23.286+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=76, status='terminated', exitcode=1, started='02:10:37') (76) terminated with exit code 1
+[2024-09-29T02:11:25.572+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2024-09-29T02:11:25.610+0000] {taskinstance.py:2063} INFO - Dependencies not met for <TaskInstance: AirCrashInvestigation_pipeline.scrape_LoadS3 scheduled__2024-09-28T00:00:00+00:00 [skipped]>, dependency 'Task Instance State' FAILED: Task is in the 'skipped' state.
+[2024-09-29T02:11:25.619+0000] {local_task_job_runner.py:163} INFO - Task is not able to be run
+[2024-09-30T03:09:38.471+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2024-09-30T03:09:38.512+0000] {taskinstance.py:2073} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: AirCrashInvestigation_pipeline.scrape_LoadS3 scheduled__2024-09-28T00:00:00+00:00 [queued]>
+[2024-09-30T03:09:38.524+0000] {taskinstance.py:2073} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: AirCrashInvestigation_pipeline.scrape_LoadS3 scheduled__2024-09-28T00:00:00+00:00 [queued]>
+[2024-09-30T03:09:38.525+0000] {taskinstance.py:2303} INFO - Starting attempt 1 of 2
+[2024-09-30T03:09:38.542+0000] {taskinstance.py:2327} INFO - Executing <Task(BashOperator): scrape_LoadS3> on 2024-09-28 00:00:00+00:00
+[2024-09-30T03:09:38.551+0000] {warnings.py:110} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61: DeprecationWarning: This process (pid=94) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2024-09-30T03:09:38.558+0000] {standard_task_runner.py:63} INFO - Started process 103 to run task
+[2024-09-30T03:09:38.553+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'AirCrashInvestigation_pipeline', 'scrape_LoadS3', 'scheduled__2024-09-28T00:00:00+00:00', '--job-id', '8', '--raw', '--subdir', 'DAGS_FOLDER/main_dag.py', '--cfg-path', '/tmp/tmpzm1losxp']
+[2024-09-30T03:09:38.560+0000] {standard_task_runner.py:91} INFO - Job 8: Subtask scrape_LoadS3
+[2024-09-30T03:09:38.685+0000] {task_command.py:426} INFO - Running <TaskInstance: AirCrashInvestigation_pipeline.scrape_LoadS3 scheduled__2024-09-28T00:00:00+00:00 [running]> on host 60abf2d32f6d
+[2024-09-30T03:09:38.847+0000] {taskinstance.py:2644} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='AirCrashInvestigation_pipeline' AIRFLOW_CTX_TASK_ID='scrape_LoadS3' AIRFLOW_CTX_EXECUTION_DATE='2024-09-28T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-09-28T00:00:00+00:00'
+[2024-09-30T03:09:38.848+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2024-09-30T03:09:38.878+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2024-09-30T03:09:38.879+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', 'python3 /opt/***/tasks/flightDataWebScrape.py']
+[2024-09-30T03:09:38.901+0000] {subprocess.py:86} INFO - Output:
+[2024-09-30T03:09:39.855+0000] {subprocess.py:93} INFO - Traceback (most recent call last):
+[2024-09-30T03:09:39.855+0000] {subprocess.py:93} INFO -   File "/opt/***/tasks/flightDataWebScrape.py", line 5, in <module>
+[2024-09-30T03:09:39.861+0000] {subprocess.py:93} INFO -     from pipelineActions import *
+[2024-09-30T03:09:39.862+0000] {subprocess.py:93} INFO -   File "/opt/***/tasks/pipelineActions.py", line 13, in <module>
+[2024-09-30T03:09:39.862+0000] {subprocess.py:93} INFO -     config.read(config_file_path)
+[2024-09-30T03:09:39.863+0000] {subprocess.py:93} INFO -   File "/usr/local/lib/python3.12/configparser.py", line 684, in read
+[2024-09-30T03:09:39.863+0000] {subprocess.py:93} INFO -     self._read(fp, filename)
+[2024-09-30T03:09:39.864+0000] {subprocess.py:93} INFO -   File "/usr/local/lib/python3.12/configparser.py", line 1063, in _read
+[2024-09-30T03:09:39.864+0000] {subprocess.py:93} INFO -     raise MissingSectionHeaderError(fpname, lineno, line)
+[2024-09-30T03:09:39.864+0000] {subprocess.py:93} INFO - configparser.MissingSectionHeaderError: File contains no section headers.
+[2024-09-30T03:09:39.865+0000] {subprocess.py:93} INFO - file: PosixPath('/opt/***/tasks/pipeline.conf'), line: 1
+[2024-09-30T03:09:39.865+0000] {subprocess.py:93} INFO - 'bucket_name = "flightcrashbucket"\n'
+[2024-09-30T03:09:39.973+0000] {subprocess.py:97} INFO - Command exited with return code 1
+[2024-09-30T03:09:39.974+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2024-09-30T03:09:39.986+0000] {taskinstance.py:2890} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 465, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 432, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 400, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/bash.py", line 243, in execute
+    raise AirflowException(
+airflow.exceptions.AirflowException: Bash command failed. The command returned a non-zero exit code 1.
+[2024-09-30T03:09:39.999+0000] {taskinstance.py:1205} INFO - Marking task as UP_FOR_RETRY. dag_id=AirCrashInvestigation_pipeline, task_id=scrape_LoadS3, execution_date=20240928T000000, start_date=20240930T030938, end_date=20240930T030939
+[2024-09-30T03:09:40.025+0000] {standard_task_runner.py:110} ERROR - Failed to execute job 8 for task scrape_LoadS3 (Bash command failed. The command returned a non-zero exit code 1.; 103)
+[2024-09-30T03:09:40.064+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 1
+[2024-09-30T03:09:40.100+0000] {taskinstance.py:3482} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-09-30T03:09:40.103+0000] {local_task_job_runner.py:222} INFO - ::endgroup::
+[2024-10-02T00:38:31.935+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2024-10-02T00:38:31.974+0000] {taskinstance.py:2073} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: AirCrashInvestigation_pipeline.scrape_LoadS3 scheduled__2024-09-28T00:00:00+00:00 [queued]>
+[2024-10-02T00:38:31.984+0000] {taskinstance.py:2073} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: AirCrashInvestigation_pipeline.scrape_LoadS3 scheduled__2024-09-28T00:00:00+00:00 [queued]>
+[2024-10-02T00:38:31.988+0000] {taskinstance.py:2303} INFO - Starting attempt 1 of 2
+[2024-10-02T00:38:32.010+0000] {taskinstance.py:2327} INFO - Executing <Task(BashOperator): scrape_LoadS3> on 2024-09-28 00:00:00+00:00
+[2024-10-02T00:38:32.021+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'AirCrashInvestigation_pipeline', 'scrape_LoadS3', 'scheduled__2024-09-28T00:00:00+00:00', '--job-id', '9', '--raw', '--subdir', 'DAGS_FOLDER/main_dag.py', '--cfg-path', '/tmp/tmpuft9gt90']
+[2024-10-02T00:38:32.024+0000] {warnings.py:110} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61: DeprecationWarning: This process (pid=71) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2024-10-02T00:38:32.027+0000] {standard_task_runner.py:63} INFO - Started process 85 to run task
+[2024-10-02T00:38:32.027+0000] {standard_task_runner.py:91} INFO - Job 9: Subtask scrape_LoadS3
+[2024-10-02T00:38:32.128+0000] {task_command.py:426} INFO - Running <TaskInstance: AirCrashInvestigation_pipeline.scrape_LoadS3 scheduled__2024-09-28T00:00:00+00:00 [running]> on host 5050c2f305ab
+[2024-10-02T00:38:32.237+0000] {taskinstance.py:2644} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='AirCrashInvestigation_pipeline' AIRFLOW_CTX_TASK_ID='scrape_LoadS3' AIRFLOW_CTX_EXECUTION_DATE='2024-09-28T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-09-28T00:00:00+00:00'
+[2024-10-02T00:38:32.240+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2024-10-02T00:38:32.256+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2024-10-02T00:38:32.257+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', 'python3 /opt/***/tasks/flightDataWebScrape.py']
+[2024-10-02T00:38:32.273+0000] {subprocess.py:86} INFO - Output:
+[2024-10-02T00:38:52.153+0000] {local_task_job_runner.py:310} WARNING - State of this instance has been externally set to failed. Terminating instance.
+[2024-10-02T00:38:52.154+0000] {local_task_job_runner.py:222} INFO - ::endgroup::
+[2024-10-02T00:38:52.155+0000] {process_utils.py:132} INFO - Sending 15 to group 85. PIDs of all processes in the group: [88, 85]
+[2024-10-02T00:38:52.155+0000] {process_utils.py:87} INFO - Sending the signal 15 to group 85
+[2024-10-02T00:38:52.155+0000] {taskinstance.py:2607} ERROR - Received SIGTERM. Terminating subprocesses.
+[2024-10-02T00:38:52.155+0000] {subprocess.py:104} INFO - Sending SIGTERM signal to process group
+[2024-10-02T00:38:52.156+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2024-10-02T00:38:52.172+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=85, status='terminated', exitcode=0, started='00:38:31') (85) terminated with exit code 0
+[2024-10-02T00:38:52.172+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=88, status='terminated', started='00:38:32') (88) terminated with exit code None
+[2024-10-02T02:09:34.443+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2024-10-02T02:09:34.469+0000] {taskinstance.py:2073} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: AirCrashInvestigation_pipeline.scrape_LoadS3 scheduled__2024-09-28T00:00:00+00:00 [queued]>
+[2024-10-02T02:09:34.490+0000] {taskinstance.py:2073} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: AirCrashInvestigation_pipeline.scrape_LoadS3 scheduled__2024-09-28T00:00:00+00:00 [queued]>
+[2024-10-02T02:09:34.492+0000] {taskinstance.py:2303} INFO - Starting attempt 1 of 2
+[2024-10-02T02:09:34.533+0000] {taskinstance.py:2327} INFO - Executing <Task(BashOperator): scrape_LoadS3> on 2024-09-28 00:00:00+00:00
+[2024-10-02T02:09:34.543+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'AirCrashInvestigation_pipeline', 'scrape_LoadS3', 'scheduled__2024-09-28T00:00:00+00:00', '--job-id', '8', '--raw', '--subdir', 'DAGS_FOLDER/main_dag.py', '--cfg-path', '/tmp/tmpys2ynfgf']
+[2024-10-02T02:09:34.548+0000] {standard_task_runner.py:91} INFO - Job 8: Subtask scrape_LoadS3
+[2024-10-02T02:09:34.553+0000] {warnings.py:110} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61: DeprecationWarning: This process (pid=79) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2024-10-02T02:09:34.559+0000] {standard_task_runner.py:63} INFO - Started process 91 to run task
+[2024-10-02T02:09:34.627+0000] {task_command.py:426} INFO - Running <TaskInstance: AirCrashInvestigation_pipeline.scrape_LoadS3 scheduled__2024-09-28T00:00:00+00:00 [running]> on host ac8ffcfe4778
+[2024-10-02T02:09:34.782+0000] {taskinstance.py:2644} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='AirCrashInvestigation_pipeline' AIRFLOW_CTX_TASK_ID='scrape_LoadS3' AIRFLOW_CTX_EXECUTION_DATE='2024-09-28T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-09-28T00:00:00+00:00'
+[2024-10-02T02:09:34.783+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2024-10-02T02:09:34.813+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2024-10-02T02:09:34.817+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', 'python3 /opt/***/tasks/flightDataWebScrape.py']
+[2024-10-02T02:09:34.828+0000] {subprocess.py:86} INFO - Output:
+[2024-10-02T02:11:43.925+0000] {subprocess.py:93} INFO - 1920 data accessed
+[2024-10-02T02:11:43.926+0000] {subprocess.py:93} INFO - fetched empty data in1920
+[2024-10-02T02:11:43.927+0000] {subprocess.py:93} INFO - fetched empty data in1920
+[2024-10-02T02:11:43.927+0000] {subprocess.py:93} INFO - fetched empty data in1920
+[2024-10-02T02:11:43.927+0000] {subprocess.py:93} INFO - fetched empty data in1920
+[2024-10-02T02:11:43.928+0000] {subprocess.py:93} INFO - fetched empty data in1920
+[2024-10-02T02:11:43.928+0000] {subprocess.py:93} INFO - fetched empty data in1920
+[2024-10-02T02:11:43.929+0000] {subprocess.py:93} INFO - fetched empty data in1920
+[2024-10-02T02:11:43.929+0000] {subprocess.py:93} INFO - fetched empty data in1920
+[2024-10-02T02:11:43.930+0000] {subprocess.py:93} INFO - fetched empty data in1920
+[2024-10-02T02:11:43.930+0000] {subprocess.py:93} INFO - fetched empty data in1920
+[2024-10-02T02:11:43.931+0000] {subprocess.py:93} INFO - fetched empty data in1920
+[2024-10-02T02:11:43.931+0000] {subprocess.py:93} INFO - fetched empty data in1920
+[2024-10-02T02:11:43.931+0000] {subprocess.py:93} INFO - fetched empty data in1920
+[2024-10-02T02:11:43.932+0000] {subprocess.py:93} INFO - fetched empty data in1920
+[2024-10-02T02:11:43.932+0000] {subprocess.py:93} INFO - fetched empty data in1920
+[2024-10-02T02:11:43.933+0000] {subprocess.py:93} INFO - Traceback (most recent call last):
+[2024-10-02T02:11:43.933+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.12/site-packages/urllib3/connection.py", line 174, in _new_conn
+[2024-10-02T02:11:43.934+0000] {subprocess.py:93} INFO -     conn = connection.create_connection(
+[2024-10-02T02:11:43.934+0000] {subprocess.py:93} INFO -            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2024-10-02T02:11:43.934+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.12/site-packages/urllib3/util/connection.py", line 95, in create_connection
+[2024-10-02T02:11:43.937+0000] {subprocess.py:93} INFO -     raise err
+[2024-10-02T02:11:43.937+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.12/site-packages/urllib3/util/connection.py", line 85, in create_connection
+[2024-10-02T02:11:43.937+0000] {subprocess.py:93} INFO -     sock.connect(sa)
+[2024-10-02T02:11:43.937+0000] {subprocess.py:93} INFO - ConnectionRefusedError: [Errno 111] Connection refused
+[2024-10-02T02:11:43.938+0000] {subprocess.py:93} INFO - 
+[2024-10-02T02:11:43.938+0000] {subprocess.py:93} INFO - During handling of the above exception, another exception occurred:
+[2024-10-02T02:11:43.938+0000] {subprocess.py:93} INFO - 
+[2024-10-02T02:11:43.938+0000] {subprocess.py:93} INFO - Traceback (most recent call last):
+[2024-10-02T02:11:43.939+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.12/site-packages/urllib3/connectionpool.py", line 715, in urlopen
+[2024-10-02T02:11:43.939+0000] {subprocess.py:93} INFO -     httplib_response = self._make_request(
+[2024-10-02T02:11:43.939+0000] {subprocess.py:93} INFO -                        ^^^^^^^^^^^^^^^^^^^
+[2024-10-02T02:11:43.939+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.12/site-packages/urllib3/connectionpool.py", line 404, in _make_request
+[2024-10-02T02:11:43.939+0000] {subprocess.py:93} INFO -     self._validate_conn(conn)
+[2024-10-02T02:11:43.939+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.12/site-packages/urllib3/connectionpool.py", line 1058, in _validate_conn
+[2024-10-02T02:11:43.940+0000] {subprocess.py:93} INFO -     conn.connect()
+[2024-10-02T02:11:43.940+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.12/site-packages/urllib3/connection.py", line 363, in connect
+[2024-10-02T02:11:43.940+0000] {subprocess.py:93} INFO -     self.sock = conn = self._new_conn()
+[2024-10-02T02:11:43.941+0000] {subprocess.py:93} INFO -                        ^^^^^^^^^^^^^^^^
+[2024-10-02T02:11:43.944+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.12/site-packages/urllib3/connection.py", line 186, in _new_conn
+[2024-10-02T02:11:43.945+0000] {subprocess.py:93} INFO -     raise NewConnectionError(
+[2024-10-02T02:11:43.945+0000] {subprocess.py:93} INFO - urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPSConnection object at 0xffffa3364dd0>: Failed to establish a new connection: [Errno 111] Connection refused
+[2024-10-02T02:11:43.945+0000] {subprocess.py:93} INFO - 
+[2024-10-02T02:11:43.945+0000] {subprocess.py:93} INFO - During handling of the above exception, another exception occurred:
+[2024-10-02T02:11:43.945+0000] {subprocess.py:93} INFO - 
+[2024-10-02T02:11:43.945+0000] {subprocess.py:93} INFO - Traceback (most recent call last):
+[2024-10-02T02:11:43.945+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.12/site-packages/requests/adapters.py", line 486, in send
+[2024-10-02T02:11:43.945+0000] {subprocess.py:93} INFO -     resp = conn.urlopen(
+[2024-10-02T02:11:43.945+0000] {subprocess.py:93} INFO -            ^^^^^^^^^^^^^
+[2024-10-02T02:11:43.945+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.12/site-packages/urllib3/connectionpool.py", line 799, in urlopen
+[2024-10-02T02:11:43.946+0000] {subprocess.py:93} INFO -     retries = retries.increment(
+[2024-10-02T02:11:43.946+0000] {subprocess.py:93} INFO -               ^^^^^^^^^^^^^^^^^^
+[2024-10-02T02:11:43.946+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.12/site-packages/urllib3/util/retry.py", line 592, in increment
+[2024-10-02T02:11:43.946+0000] {subprocess.py:93} INFO -     raise MaxRetryError(_pool, url, error or ResponseError(cause))
+[2024-10-02T02:11:43.947+0000] {subprocess.py:93} INFO - urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='www.planecrashinfo.com', port=443): Max retries exceeded with url: /1920/1920-25.htm (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0xffffa3364dd0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2024-10-02T02:11:43.947+0000] {subprocess.py:93} INFO - 
+[2024-10-02T02:11:43.947+0000] {subprocess.py:93} INFO - During handling of the above exception, another exception occurred:
+[2024-10-02T02:11:43.947+0000] {subprocess.py:93} INFO - 
+[2024-10-02T02:11:43.947+0000] {subprocess.py:93} INFO - Traceback (most recent call last):
+[2024-10-02T02:11:43.948+0000] {subprocess.py:93} INFO -   File "/opt/***/tasks/flightDataWebScrape.py", line 91, in <module>
+[2024-10-02T02:11:43.949+0000] {subprocess.py:93} INFO -     main()
+[2024-10-02T02:11:43.949+0000] {subprocess.py:93} INFO -     ^^^^^^
+[2024-10-02T02:11:43.949+0000] {subprocess.py:93} INFO -   File "/opt/***/tasks/flightDataWebScrape.py", line 37, in main
+[2024-10-02T02:11:43.949+0000] {subprocess.py:93} INFO -     r = requests.get(url + str(year) + s + end2)
+[2024-10-02T02:11:43.950+0000] {subprocess.py:93} INFO -         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2024-10-02T02:11:43.951+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.12/site-packages/requests/api.py", line 73, in get
+[2024-10-02T02:11:43.952+0000] {subprocess.py:93} INFO -     return request("get", url, params=params, **kwargs)
+[2024-10-02T02:11:43.952+0000] {subprocess.py:93} INFO -            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2024-10-02T02:11:43.952+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.12/site-packages/requests/api.py", line 59, in request
+[2024-10-02T02:11:43.952+0000] {subprocess.py:93} INFO -     return session.request(method=method, url=url, **kwargs)
+[2024-10-02T02:11:43.952+0000] {subprocess.py:93} INFO -            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2024-10-02T02:11:43.952+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.12/site-packages/requests/sessions.py", line 589, in request
+[2024-10-02T02:11:43.952+0000] {subprocess.py:93} INFO -     resp = self.send(prep, **send_kwargs)
+[2024-10-02T02:11:43.953+0000] {subprocess.py:93} INFO -            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2024-10-02T02:11:43.953+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.12/site-packages/requests/sessions.py", line 703, in send
+[2024-10-02T02:11:43.955+0000] {subprocess.py:93} INFO -     r = adapter.send(request, **kwargs)
+[2024-10-02T02:11:43.955+0000] {subprocess.py:93} INFO -         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2024-10-02T02:11:43.955+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.12/site-packages/requests/adapters.py", line 519, in send
+[2024-10-02T02:11:43.956+0000] {subprocess.py:93} INFO -     raise ConnectionError(e, request=request)
+[2024-10-02T02:11:43.956+0000] {subprocess.py:93} INFO - requests.exceptions.ConnectionError: HTTPSConnectionPool(host='www.planecrashinfo.com', port=443): Max retries exceeded with url: /1920/1920-25.htm (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0xffffa3364dd0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2024-10-02T02:11:44.006+0000] {subprocess.py:97} INFO - Command exited with return code 1
+[2024-10-02T02:11:44.009+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2024-10-02T02:11:44.017+0000] {taskinstance.py:2890} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 465, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 432, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 400, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/bash.py", line 243, in execute
+    raise AirflowException(
+airflow.exceptions.AirflowException: Bash command failed. The command returned a non-zero exit code 1.
+[2024-10-02T02:11:44.019+0000] {taskinstance.py:1205} INFO - Marking task as UP_FOR_RETRY. dag_id=AirCrashInvestigation_pipeline, task_id=scrape_LoadS3, execution_date=20240928T000000, start_date=20241002T020934, end_date=20241002T021144
+[2024-10-02T02:11:44.028+0000] {standard_task_runner.py:110} ERROR - Failed to execute job 8 for task scrape_LoadS3 (Bash command failed. The command returned a non-zero exit code 1.; 91)
+[2024-10-02T02:11:44.034+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 1
+[2024-10-02T02:11:44.046+0000] {taskinstance.py:3482} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-10-02T02:11:44.049+0000] {local_task_job_runner.py:222} INFO - ::endgroup::
