@@ -1,17 +1,21 @@
-#########  Project Overview  ########
+🕵️‍♂️How is it feel to be an investigator and solve mysterious incidents in aviation history? 
 
-This project uses Docker, Airflow, and Terraform to build and deploy infrastructure on AWS, manage ETL pipelines, and run tasks. Data is extracted from source http://planecrashinfo.com
-Infrastructure provisioning through [Terraform](https://www.terraform.io/), containerized through [Docker](https://www.docker.com/) and orchestrated through [Airflow](https://airflow.apache.org/). 
+It all started with a documentary call Air Crash Investigation on Discovery Channel I used to watch when I was a kid. I used to spend hours watching episodes to episodes trying to solve what single thing when wrong that would crash a 220 ton state-of-the-art crashed liked a paper weight. 
 
+The inspiration led me to creating this project. It’s a fully automated, orchestrated, and containerized data pipeline that is self-collecting air incidents on a website and setting up infrastructures on AWS to host, transform, then create insights on airplane crashes. 
+
+● Fetched and transformed web-scraped data to store in database, visualize past air crash incidents
+● Fully automated Data Pipeline, infrastructures build with T erraform (IaC), orchestrated with Airflow,
+containerized with Docker, and secured using AWS policies, ready to connected to PowerBi
+● Simplified Bash Commands using Make
+● Skills and T echnologies: Python, SQL, AWS S3, AWS Redshift database, Terraform, AirFlow,
+Docker, BeautifulSoup, Pandas, Make
 
 ###### Tasks ######
 
 1. Scrape Data from Source: flightDataWebScrape.py
 2. Validate, clean and initial data transfromation: dataValidate.py
 3. Load data into a Redshift database: loadRedshift.py
-
-
-
 
 ###### Prerequisites ######
 
